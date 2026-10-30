@@ -1,0 +1,2260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JACOB GAPP SCHOOL, PALADUGU - Master Pronouns 500 Suite</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts: Nunito & Noto Sans Telugu -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Noto+Sans+Telugu:wght@400;600;700&family=Nunito:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Canvas Confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <style>
+        :root {
+            --font-main: 'Nunito', 'Noto Sans Telugu', sans-serif;
+            --font-display: 'Fredoka', 'Noto Sans Telugu', sans-serif;
+        }
+        body {
+            font-family: var(--font-main);
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 50%, #fef3c7 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        .font-display {
+            font-family: var(--font-display);
+        }
+        .telugu-text {
+            font-family: 'Noto Sans Telugu', sans-serif;
+            line-height: 1.75;
+        }
+        /* 3D Gamified Button Styles */
+        .btn-3d-indigo {
+            background: linear-gradient(180deg, #6366f1 0%, #4f46e5 100%);
+            box-shadow: 0 5px 0 #3730a3, 0 8px 15px rgba(79, 70, 229, 0.3);
+            transition: all 0.15s ease;
+        }
+        .btn-3d-indigo:active {
+            transform: translateY(4px);
+            box-shadow: 0 1px 0 #3730a3, 0 3px 6px rgba(79, 70, 229, 0.2);
+        }
+        .btn-3d-emerald {
+            background: linear-gradient(180deg, #10b981 0%, #059669 100%);
+            box-shadow: 0 5px 0 #065f46, 0 8px 15px rgba(16, 185, 129, 0.3);
+            transition: all 0.15s ease;
+        }
+        .btn-3d-emerald:active {
+            transform: translateY(4px);
+            box-shadow: 0 1px 0 #065f46;
+        }
+        .btn-3d-amber {
+            background: linear-gradient(180deg, #f59e0b 0%, #d97706 100%);
+            box-shadow: 0 5px 0 #92400e, 0 8px 15px rgba(245, 158, 11, 0.3);
+            transition: all 0.15s ease;
+        }
+        .btn-3d-amber:active {
+            transform: translateY(4px);
+            box-shadow: 0 1px 0 #92400e;
+        }
+        .btn-3d-rose {
+            background: linear-gradient(180deg, #f43f5e 0%, #e11d48 100%);
+            box-shadow: 0 5px 0 #9f1239, 0 8px 15px rgba(244, 63, 94, 0.3);
+            transition: all 0.15s ease;
+        }
+        .btn-3d-rose:active {
+            transform: translateY(4px);
+            box-shadow: 0 1px 0 #9f1239;
+        }
+        /* Number Box Grid Custom Scrollbar */
+        .custom-scroll::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        .custom-scroll::-webkit-scrollbar-track {
+            background: #f1f5f9;
+            border-radius: 8px;
+        }
+        .custom-scroll::-webkit-scrollbar-thumb {
+            background: #94a3b8;
+            border-radius: 8px;
+        }
+        .custom-scroll::-webkit-scrollbar-thumb:hover {
+            background: #64748b;
+        }
+        /* Question Option Card Hover & States */
+        .option-btn {
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            border-bottom-width: 4px;
+        }
+        .option-btn:hover:not(:disabled) {
+            transform: translateY(-2px);
+        }
+        .option-btn:active:not(:disabled) {
+            transform: translateY(2px);
+            border-bottom-width: 2px;
+        }
+        /* Active Number Box Pulse */
+        @keyframes pulse-ring {
+            0% { box-shadow: 0 0 0 0 rgba(79, 70, 229, 0.7); }
+            70% { box-shadow: 0 0 0 8px rgba(79, 70, 229, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(79, 70, 229, 0); }
+        }
+        .num-box-active {
+            animation: pulse-ring 2s infinite;
+            transform: scale(1.08);
+            z-index: 10;
+        }
+        /* Explanation Reveal Animation */
+        @keyframes slideDownFade {
+            from { opacity: 0; transform: translateY(-12px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .explanation-animate {
+            animation: slideDownFade 0.35s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="text-slate-800 pb-20">
+
+    <!-- ================= TOP BRANDING HEADER ================= -->
+    <header class="bg-gradient-to-r from-indigo-900 via-blue-800 to-indigo-900 text-white shadow-xl border-b-4 border-amber-400">
+        <div class="max-w-7xl mx-auto px-3 sm:px-6 py-3">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-3">
+                <div class="flex items-center gap-3 text-center md:text-left">
+                    <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-amber-400 text-indigo-950 flex items-center justify-center text-2xl sm:text-3xl font-black shadow-lg shrink-0 border-2 border-white">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <div>
+                        <div class="inline-flex items-center gap-1.5 bg-amber-400/20 border border-amber-300/40 text-amber-200 text-xs font-bold px-2.5 py-0.5 rounded-full mb-0.5">
+                            <i class="fa-solid fa-star text-amber-400"></i> ENGLISH GRAMMAR MASTERY LAB
+                        </div>
+                        <h1 class="font-display text-lg sm:text-2xl md:text-3xl font-extrabold tracking-wide text-white drop-shadow">
+                            JACOB GAPP SCHOOL, PALADUGU, TELANGANA
+                        </h1>
+                        <p class="text-xs sm:text-sm text-blue-200 font-semibold">
+                            <i class="fa-solid fa-user-tie text-amber-300 mr-1"></i> Correspondent: <span class="text-white font-bold">Balaswamy</span>
+                            <span class="mx-1.5">|</span>
+                            <i class="fa-solid fa-chalkboard-user text-amber-300 mr-1"></i> Principal: <span class="text-white font-bold">Raj Mohan</span>
+                            <span class="mx-1.5">|</span>
+                            <i class="fa-solid fa-phone-volume text-emerald-300 mr-1"></i> <a href="tel:8555927854" class="text-amber-300 underline hover:text-white">8555927854</a>
+                            <span class="mx-1.5 hidden sm:inline">|</span>
+                            <span class="block sm:inline text-amber-200"><i class="fa-solid fa-envelope text-amber-300 mr-1"></i> balaswamysm@gmail.com</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Quick Action Controls in Header -->
+                <div class="flex flex-wrap items-center justify-center gap-2">
+                    <button onclick="toggleLearningGuide()" class="px-3 py-2 rounded-xl bg-white/15 hover:bg-white/25 text-white text-xs sm:text-sm font-bold border border-white/30 flex items-center gap-1.5 transition">
+                        <i class="fa-solid fa-book-open-reader text-amber-300"></i>
+                        <span>9 Pronouns Guide (తెలుగు పాఠం)</span>
+                    </button>
+                    <button onclick="reshuffleAllConfirm()" class="px-3 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs sm:text-sm font-extrabold shadow flex items-center gap-1.5 transition" title="Jumble all 500 questions and options">
+                        <i class="fa-solid fa-shuffle"></i>
+                        <span>Jumble 500 (ప్రశ్నలు తారుమారు)</span>
+                    </button>
+                    <button id="soundToggleBtn" onclick="toggleSound()" class="p-2.5 rounded-xl bg-white/15 hover:bg-white/25 text-amber-300 border border-white/30 transition" title="Toggle Sound Effects">
+                        <i class="fa-solid fa-volume-high" id="soundIcon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= STICKY LIVE SCOREBOARD & EMAIL BAR ================= -->
+    <div class="sticky top-0 z-40 bg-white/95 backdrop-blur-md shadow-lg border-b-2 border-indigo-100">
+        <div class="max-w-7xl mx-auto px-2 sm:px-6 py-2">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+                
+                <!-- Score Metrics -->
+                <div class="flex flex-wrap items-center gap-1.5 sm:gap-2.5">
+                    <!-- Total -->
+                    <div class="bg-slate-100 border border-slate-300 rounded-xl px-2.5 py-1 flex items-center gap-1.5">
+                        <span class="text-[11px] sm:text-xs font-bold text-slate-500 uppercase">Total:</span>
+                        <span class="text-sm sm:text-base font-black text-slate-800">500</span>
+                    </div>
+                    <!-- Attempted -->
+                    <div class="bg-indigo-50 border border-indigo-200 rounded-xl px-2.5 py-1 flex items-center gap-1.5">
+                        <i class="fa-solid fa-pen-clip text-indigo-600 text-xs"></i>
+                        <span class="text-[11px] sm:text-xs font-bold text-indigo-700">Attempted:</span>
+                        <span id="statAttempted" class="text-sm sm:text-base font-black text-indigo-900">0</span>
+                    </div>
+                    <!-- Right Answered -->
+                    <div class="bg-emerald-50 border-2 border-emerald-400 rounded-xl px-2.5 py-1 flex items-center gap-1.5 shadow-sm">
+                        <i class="fa-solid fa-circle-check text-emerald-600 text-sm"></i>
+                        <span class="text-[11px] sm:text-xs font-bold text-emerald-800">Right (ఒప్పు):</span>
+                        <span id="statRight" class="text-sm sm:text-base font-black text-emerald-700">0</span>
+                    </div>
+                    <!-- Wrong Answered -->
+                    <div class="bg-rose-50 border-2 border-rose-400 rounded-xl px-2.5 py-1 flex items-center gap-1.5 shadow-sm">
+                        <i class="fa-solid fa-circle-xmark text-rose-600 text-sm"></i>
+                        <span class="text-[11px] sm:text-xs font-bold text-rose-800">Wrong (తప్పు):</span>
+                        <span id="statWrong" class="text-sm sm:text-base font-black text-rose-700">0</span>
+                    </div>
+                    <!-- Marks & Percentage -->
+                    <div class="bg-amber-50 border-2 border-amber-400 rounded-xl px-3 py-1 flex items-center gap-2 shadow-sm">
+                        <i class="fa-solid fa-trophy text-amber-500 text-sm"></i>
+                        <div>
+                            <span class="text-[11px] sm:text-xs font-bold text-amber-900">Marks:</span>
+                            <span id="statMarks" class="text-sm sm:text-base font-black text-amber-800">0/500</span>
+                            <span id="statPercent" class="ml-1 text-xs sm:text-sm font-black bg-amber-400 text-slate-900 px-1.5 py-0.5 rounded-md">0%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side: Number Grid Toggle & Send Results Button -->
+                <div class="flex items-center gap-2 ml-auto">
+                    <button onclick="scrollToNumberGrid()" class="px-3 py-1.5 rounded-xl bg-indigo-100 hover:bg-indigo-200 text-indigo-900 font-extrabold text-xs sm:text-sm flex items-center gap-1.5 border border-indigo-300 transition">
+                        <i class="fa-solid fa-table-cells"></i>
+                        <span class="hidden sm:inline">1-500 Box</span>
+                        <span class="sm:hidden">1-500</span>
+                    </button>
+
+                    <button onclick="openEmailModal()" class="btn-3d-emerald text-white font-extrabold text-xs sm:text-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl flex items-center gap-1.5">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        <span>Send Results (ఫలితాలు పంపు)</span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= MAIN CONTAINER ================= -->
+    <main class="max-w-7xl mx-auto px-3 sm:px-6 pt-4 space-y-6">
+
+        <!-- STUDENT INFO & QUICK WELCOME BANNER -->
+        <section class="bg-white rounded-2xl shadow-md border-2 border-indigo-100 p-3 sm:p-4">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-3 items-center">
+                <div class="lg:col-span-4 flex items-center gap-3">
+                    <div class="w-11 h-11 rounded-xl bg-indigo-600 text-white flex items-center justify-center text-xl shrink-0">
+                        <i class="fa-solid fa-user-graduate"></i>
+                    </div>
+                    <div>
+                        <h2 class="font-bold text-slate-800 text-sm sm:text-base">Student Details (విద్యార్థి వివరాలు)</h2>
+                        <p class="text-xs text-slate-500 telugu-text">500 పూర్తి కాకపోయినా మీ ఫలితాలను <span class="font-bold text-indigo-600">Formspree / balaswamysm@gmail.com</span> కు పంపవచ్చు!</p>
+                    </div>
+                </div>
+                <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2">
+                    <input type="text" id="studentName" placeholder="Student Name (విద్యార్థి పేరు)" oninput="saveStudentInfo()" class="w-full px-3 py-2 rounded-xl border-2 border-slate-200 focus:border-indigo-500 focus:outline-none text-sm font-bold text-slate-800">
+                    <select id="studentClass" onchange="saveStudentInfo()" class="w-full px-3 py-2 rounded-xl border-2 border-slate-200 focus:border-indigo-500 focus:outline-none text-sm font-bold text-slate-800 bg-white">
+                        <option value="">Select Class (తరగతి)</option>
+                        <option value="Class 5">Class 5 (5వ తరగతి)</option>
+                        <option value="Class 6">Class 6 (6వ తరగతి)</option>
+                        <option value="Class 7" selected>Class 7 (7వ తరగతి)</option>
+                        <option value="Class 8">Class 8 (8వ తరగతి)</option>
+                        <option value="Class 9">Class 9 (9వ తరగతి)</option>
+                        <option value="Class 10">Class 10 (10వ తరగతి)</option>
+                    </select>
+                    <input type="text" id="studentRoll" placeholder="Roll No (రోల్ నంబర్)" oninput="saveStudentInfo()" class="w-full px-3 py-2 rounded-xl border-2 border-slate-200 focus:border-indigo-500 focus:outline-none text-sm font-bold text-slate-800">
+                    <select id="studentVillage" onchange="saveStudentInfo()" class="w-full px-3 py-2 rounded-xl border-2 border-slate-200 focus:border-indigo-500 focus:outline-none text-sm font-bold text-slate-700 bg-white">
+                        <option value="Paladugu (పాలడుగు)">Paladugu (పాలడుగు)</option>
+                        <option value="Chinnabeeravalli (చిన్నబీరవల్లి)">Chinnabeeravalli (చిన్నబీరవల్లి)</option>
+                        <option value="Gannavaram (గన్నవరం)">Gannavaram (గన్నవరం)</option>
+                        <option value="Peddabeeravalli (పెద్దబీరవల్లి)">Peddabeeravalli (పెద్దబీరవల్లి)</option>
+                        <option value="Janakipuram (జానకీపురం)">Janakipuram (జానకీపురం)</option>
+                        <option value="Other Village (ఇతర గ్రామం)">Other Village (ఇతర గ్రామం)</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= 9 PRONOUN TYPES INTERACTIVE LEARNING OBJECTS (COLLAPSIBLE) ================= -->
+        <section id="learningGuideSection" class="hidden bg-gradient-to-br from-indigo-950 via-slate-900 to-indigo-950 text-white rounded-3xl shadow-2xl border-4 border-amber-400 p-4 sm:p-6 space-y-4">
+            <div class="flex items-center justify-between border-b border-white/20 pb-3">
+                <div>
+                    <span class="bg-amber-400 text-slate-950 text-xs font-black px-2.5 py-0.5 rounded-full uppercase">Interactive Study Guide</span>
+                    <h2 class="font-display text-xl sm:text-2xl font-extrabold text-amber-300 mt-1">
+                        9 Types of Pronouns in English & Telugu (9 రకాల సర్వనామములు - పూర్తి వివరణ)
+                    </h2>
+                    <p class="text-xs sm:text-sm text-blue-200 telugu-text">
+                        నామవాచకానికి (Noun - పేరుకు) బదులుగా వాడే పదాలను <strong>Pronouns (సర్వనామములు)</strong> అంటారు. ఈ క్రింది 9 రకాలను శ్రద్ధగా చదవండి:
+                    </p>
+                </div>
+                <button onclick="toggleLearningGuide()" class="bg-rose-500 hover:bg-rose-600 text-white w-9 h-9 rounded-xl font-bold flex items-center justify-center">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+
+            <!-- 9 Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5" id="pronounGuideCards">
+                <!-- Populated by JS -->
+            </div>
+        </section>
+
+        <!-- ================= FILTERS: SECTION FORMAT & PRONOUN CATEGORY ================= -->
+        <section class="bg-white rounded-2xl shadow-md border-2 border-indigo-100 p-3 sm:p-4 space-y-3">
+            <!-- Exercise Format Tabs (5 Creative Modes) -->
+            <div>
+                <div class="flex items-center justify-between mb-1.5">
+                    <span class="text-xs font-extrabold uppercase tracking-wider text-indigo-700">
+                        <i class="fa-solid fa-shapes mr-1"></i> Filter by Creative Exercise Section (అభ్యాస విభాగాలు):
+                    </span>
+                    <span id="filteredCountBadge" class="text-xs font-extrabold bg-indigo-100 text-indigo-800 px-2.5 py-0.5 rounded-full">
+                        Showing All 500 Questions
+                    </span>
+                </div>
+                <div class="flex flex-wrap gap-1.5 sm:gap-2" id="sectionFilterTabs">
+                    <button onclick="setSectionFilter('ALL')" data-sec="ALL" class="sec-tab bg-indigo-600 text-white font-extrabold text-xs sm:text-sm px-3 py-2 rounded-xl shadow-sm transition flex items-center gap-1.5">
+                        <i class="fa-solid fa-layer-group"></i> All 500 Mixed (అన్నీ 500)
+                    </button>
+                    <button onclick="setSectionFilter('MCQ')" data-sec="MCQ" class="sec-tab bg-slate-100 hover:bg-indigo-50 text-slate-700 font-bold text-xs sm:text-sm px-3 py-2 rounded-xl border border-slate-200 transition flex items-center gap-1.5">
+                        <i class="fa-solid fa-list-check text-blue-600"></i> Sec A: Choose Option (ఆప్షన్ ఎంచుకోండి)
+                    </button>
+                    <button onclick="setSectionFilter('GUESS')" data-sec="GUESS" class="sec-tab bg-slate-100 hover:bg-indigo-50 text-slate-700 font-bold text-xs sm:text-sm px-3 py-2 rounded-xl border border-slate-200 transition flex items-center gap-1.5">
+                        <i class="fa-solid fa-user-secret text-purple-600"></i> Sec B: Guess Who Riddle (పొడుపు కథలు)
+                    </button>
+                    <button onclick="setSectionFilter('TF')" data-sec="TF" class="sec-tab bg-slate-100 hover:bg-indigo-50 text-slate-700 font-bold text-xs sm:text-sm px-3 py-2 rounded-xl border border-slate-200 transition flex items-center gap-1.5">
+                        <i class="fa-solid fa-scale-balanced text-emerald-600"></i> Sec C: True or False (నిజమా / అబద్ధమా)
+                    </button>
+                    <button onclick="setSectionFilter('MATCH')" data-sec="MATCH" class="sec-tab bg-slate-100 hover:bg-indigo-50 text-slate-700 font-bold text-xs sm:text-sm px-3 py-2 rounded-xl border border-slate-200 transition flex items-center gap-1.5">
+                        <i class="fa-solid fa-puzzle-piece text-amber-600"></i> Sec D: Match & Classify (జతపరచండి)
+                    </button>
+                    <button onclick="setSectionFilter('REPLACE')" data-sec="REPLACE" class="sec-tab bg-slate-100 hover:bg-indigo-50 text-slate-700 font-bold text-xs sm:text-sm px-3 py-2 rounded-xl border border-slate-200 transition flex items-center gap-1.5">
+                        <i class="fa-solid fa-wand-magic-sparkles text-rose-600"></i> Sec E: Replace the Noun (నామవాచకాన్ని మార్చండి)
+                    </button>
+                </div>
+            </div>
+
+            <!-- Category Filter Pills (9 Pronoun Categories) -->
+            <div class="pt-2 border-t border-slate-100 flex flex-wrap items-center gap-1.5" id="categoryFilterPills">
+                <span class="text-xs font-extrabold text-slate-500 mr-1"><i class="fa-solid fa-filter"></i> Pronoun Type:</span>
+                <button onclick="setCategoryFilter('ALL')" data-cat="ALL" class="cat-pill bg-amber-400 text-slate-950 font-extrabold text-xs px-2.5 py-1 rounded-lg">All 9 Types</button>
+                <button onclick="setCategoryFilter('Personal')" data-cat="Personal" class="cat-pill bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs px-2.5 py-1 rounded-lg">1. Personal (వ్యక్తిగత)</button>
+                <button onclick="setCategoryFilter('Possessive')" data-cat="Possessive" class="cat-pill bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs px-2.5 py-1 rounded-lg">2. Possessive (স্বామ్య/హక్కు)</button>
+                <button onclick="setCategoryFilter('Demonstrative')" data-cat="Demonstrative" class="cat-pill bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs px-2.5 py-1 rounded-lg">3. Demonstrative (నిర్దేశక)</button>
+                <button onclick="setCategoryFilter('Interrogative')" data-cat="Interrogative" class="cat-pill bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs px-2.5 py-1 rounded-lg">4. Interrogative (ప్రశ్నార్థక)</button>
+                <button onclick="setCategoryFilter('Relative')" data-cat="Relative" class="cat-pill bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs px-2.5 py-1 rounded-lg">5. Relative (సంబంధ)</button>
+                <button onclick="setCategoryFilter('Indefinite')" data-cat="Indefinite" class="cat-pill bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs px-2.5 py-1 rounded-lg">6. Indefinite (అనిశ్చిత)</button>
+                <button onclick="setCategoryFilter('Reflexive')" data-cat="Reflexive" class="cat-pill bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs px-2.5 py-1 rounded-lg">7. Reflexive (ఆత్మార్థక)</button>
+                <button onclick="setCategoryFilter('Intensive')" data-cat="Intensive" class="cat-pill bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs px-2.5 py-1 rounded-lg">8. Intensive (నొక్కిచెప్పే)</button>
+                <button onclick="setCategoryFilter('Reciprocal')" data-cat="Reciprocal" class="cat-pill bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs px-2.5 py-1 rounded-lg">9. Reciprocal (పరస్పర)</button>
+            </div>
+        </section>
+
+        <!-- ================= MAIN WORKSPACE: ACTIVE QUESTION + 1-500 NAVIGATOR ================= -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+
+            <!-- LEFT / MAIN COLUMN: ACTIVE QUESTION STAGE (7 cols on desktop) -->
+            <div class="lg:col-span-7 space-y-4" id="questionStageAnchor">
+                <div class="bg-white rounded-3xl shadow-xl border-4 border-indigo-200 overflow-hidden">
+                    
+                    <!-- Question Top Bar -->
+                    <div class="bg-gradient-to-r from-indigo-600 to-blue-600 text-white px-4 sm:px-6 py-3 flex flex-wrap items-center justify-between gap-2">
+                        <div class="flex items-center gap-2">
+                            <span id="qNumberBadge" class="bg-amber-400 text-slate-950 font-display font-black text-base sm:text-lg px-3 py-1 rounded-xl shadow">
+                                Q #1 / 500
+                            </span>
+                            <span id="qSectionBadge" class="bg-white/20 text-white text-xs font-extrabold px-2.5 py-1 rounded-lg border border-white/30">
+                                Section A: Choose Option
+                            </span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span id="qCategoryBadge" class="bg-indigo-900/60 text-amber-300 text-xs font-bold px-3 py-1 rounded-lg border border-amber-300/30">
+                                Personal Pronoun
+                            </span>
+                            <button onclick="speakCurrentQuestion()" class="bg-white text-indigo-700 hover:bg-amber-300 hover:text-slate-900 w-9 h-9 rounded-xl flex items-center justify-center shadow transition" title="Listen to Question in English">
+                                <i class="fa-solid fa-volume-high"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Question Body -->
+                    <div class="p-4 sm:p-6 space-y-5">
+                        
+                        <!-- Instruction Banner -->
+                        <div id="qInstructionBox" class="bg-indigo-50/80 border-l-4 border-indigo-500 px-3.5 py-2 rounded-r-xl text-xs sm:text-sm font-bold text-indigo-900 telugu-text">
+                            <!-- Filled dynamically -->
+                        </div>
+
+                        <!-- Main Question Prompt (English + Telugu in brackets) -->
+                        <div class="bg-slate-50 rounded-2xl p-4 sm:p-5 border-2 border-slate-200 shadow-inner">
+                            <p id="qPromptText" class="text-lg sm:text-xl md:text-2xl font-extrabold text-slate-800 leading-relaxed telugu-text">
+                                <!-- Question Text -->
+                            </p>
+                            <p id="qSubTeluguText" class="mt-2 text-sm sm:text-base font-bold text-indigo-700 telugu-text">
+                                <!-- Complete Sentence Telugu Translation -->
+                            </p>
+                        </div>
+
+                        <!-- Options Grid (With Telugu translations in brackets) -->
+                        <div id="optionsContainer" class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <!-- Options rendered by JS -->
+                        </div>
+
+                        <!-- Prev / Next / Random Navigation Bar -->
+                        <div class="flex flex-wrap items-center justify-between gap-2 pt-3 border-t-2 border-slate-100">
+                            <button onclick="prevQuestion()" class="btn-3d-indigo text-white font-extrabold text-xs sm:text-sm px-4 py-2.5 rounded-xl flex items-center gap-2">
+                                <i class="fa-solid fa-arrow-left"></i>
+                                <span>Previous (వెనుకకు)</span>
+                            </button>
+
+                            <div class="flex items-center gap-2">
+                                <button onclick="goToNextUnattempted()" class="px-3 py-2.5 rounded-xl bg-amber-100 hover:bg-amber-200 text-amber-900 font-extrabold text-xs sm:text-sm border border-amber-300 transition">
+                                    <i class="fa-solid fa-forward-fast mr-1"></i> Next Unanswered
+                                </button>
+                            </div>
+
+                            <button onclick="nextQuestion()" class="btn-3d-indigo text-white font-extrabold text-xs sm:text-sm px-5 py-2.5 rounded-xl flex items-center gap-2">
+                                <span>Next (తరువాత ప్రశ్న)</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+
+                        <!-- ================= LONG DETAILED TELUGU EXPLANATION BOX (SHOWN AFTER ATTEMPT) ================= -->
+                        <div id="explanationBox" class="hidden rounded-2xl border-4 overflow-hidden explanation-animate">
+                            <!-- Status Header -->
+                            <div id="expHeader" class="px-4 py-3 text-white font-extrabold flex flex-wrap items-center justify-between gap-2">
+                                <div class="flex items-center gap-2 text-base sm:text-lg">
+                                    <i id="expIcon" class="fa-solid fa-circle-check text-2xl"></i>
+                                    <span id="expTitle"> అద్భుతం! సరైన సమాధానం (Correct Answer!)</span>
+                                </div>
+                                <button onclick="speakExplanation()" class="bg-white/20 hover:bg-white/30 text-white text-xs px-3 py-1.5 rounded-lg font-bold flex items-center gap-1.5 border border-white/40">
+                                    <i class="fa-solid fa-headphones"></i> Listen Answer
+                                </button>
+                            </div>
+
+                            <!-- Detailed Telugu Content -->
+                            <div class="p-4 sm:p-5 bg-amber-50/70 space-y-3 text-slate-800">
+                                <!-- Right & Wrong Summary Pills -->
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                                    <div class="bg-emerald-100 border-2 border-emerald-400 rounded-xl p-3">
+                                        <div class="text-xs font-extrabold text-emerald-800 uppercase">
+                                            <i class="fa-solid fa-check-double mr-1"></i> Right Answer (సరైన సమాధానం):
+                                        </div>
+                                        <div id="expRightAns" class="text-base sm:text-lg font-black text-emerald-950 mt-0.5 telugu-text"></div>
+                                    </div>
+                                    <div id="expYourAnsCard" class="bg-white border-2 border-slate-300 rounded-xl p-3">
+                                        <div class="text-xs font-extrabold text-slate-600 uppercase">
+                                            <i class="fa-solid fa-hand-pointer mr-1"></i> Your Choice (మీరు ఎంచుకున్నది):
+                                        </div>
+                                        <div id="expUserAns" class="text-base sm:text-lg font-black text-slate-900 mt-0.5 telugu-text"></div>
+                                    </div>
+                                </div>
+
+                                <!-- Long Telugu Grammar Explanation -->
+                                <div class="bg-white rounded-2xl p-4 border-2 border-amber-300 shadow-sm space-y-2.5 telugu-text">
+                                    <div class="flex items-center gap-2 text-indigo-900 font-extrabold text-sm sm:text-base border-b border-amber-200 pb-1.5">
+                                        <i class="fa-solid fa-lightbulb text-amber-500 text-lg"></i>
+                                        <span>పిల్లల కోసం సులభమైన తెలుగు వివరణ (Detailed Telugu Explanation for Children):</span>
+                                    </div>
+                                    
+                                    <div id="expLongTelugu" class="text-sm sm:text-base text-slate-800 space-y-2 leading-relaxed">
+                                        <!-- Multi-paragraph rich Telugu explanation injected by JS -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT COLUMN: 1 TO 500 INTERACTIVE NUMBER BOX NAVIGATOR (5 cols on desktop) -->
+            <div class="lg:col-span-5" id="numberGridSection">
+                <div class="bg-white rounded-3xl shadow-xl border-4 border-indigo-200 overflow-hidden">
+                    <!-- Navigator Header -->
+                    <div class="bg-slate-900 text-white px-4 py-3 flex flex-wrap items-center justify-between gap-2">
+                        <div>
+                            <h3 class="font-display font-bold text-base sm:text-lg text-amber-300 flex items-center gap-2">
+                                <i class="fa-solid fa-Grip"></i> 1 to 500 Question Navigator Box
+                            </h3>
+                            <p class="text-[11px] text-slate-300 telugu-text">
+                                ఏ నంబర్ బాక్స్ పైనైనా క్లిక్ చేస్తే ఆ ప్రశ్నకు వెళ్తుంది!
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-1.5">
+                            <input type="number" id="jumpInput" min="1" max="500" placeholder="Go # (1-500)" class="w-24 px-2.5 py-1 rounded-lg text-slate-900 font-extrabold text-xs focus:outline-none" onkeydown="if(event.key==='Enter') jumpToInputNumber()">
+                            <button onclick="jumpToInputNumber()" class="bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-xs px-2.5 py-1.5 rounded-lg">
+                                Go
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Color Legend -->
+                    <div class="bg-slate-100 px-3 py-2 border-b border-slate-200 flex flex-wrap items-center justify-between gap-2 text-[11px] font-extrabold">
+                        <div class="flex items-center gap-1.5">
+                            <span class="w-3.5 h-3.5 rounded bg-emerald-500 inline-block border border-emerald-700"></span>
+                            <span class="text-emerald-900">Right (ఒప్పు)</span>
+                        </div>
+                        <div class="flex items-center gap-1.5">
+                            <span class="w-3.5 h-3.5 rounded bg-rose-500 inline-block border border-rose-700"></span>
+                            <span class="text-rose-900">Wrong (తప్పు)</span>
+                        </div>
+                        <div class="flex items-center gap-1.5">
+                            <span class="w-3.5 h-3.5 rounded bg-amber-400 inline-block border-2 border-indigo-700"></span>
+                            <span class="text-indigo-900">Current (ప్రస్తుత)</span>
+                        </div>
+                        <div class="flex items-center gap-1.5">
+                            <span class="w-3.5 h-3.5 rounded bg-white inline-block border border-slate-400"></span>
+                            <span class="text-slate-600">Unattempted</span>
+                        </div>
+                    </div>
+
+                    <!-- Range & Status Tabs (All 1-500, 1-100..401-500, Right, Wrong, Unattempted) -->
+                    <div class="p-2 bg-indigo-50/60 border-b border-indigo-100 flex flex-wrap gap-1 justify-center">
+                        <button onclick="setGridPage('ALL')" id="gridTab_ALL" class="grid-page-tab bg-indigo-600 text-white text-xs font-extrabold px-2.5 py-1 rounded-lg">All 1-500</button>
+                        <button onclick="setGridPage(1)" id="gridTab_1" class="grid-page-tab bg-white text-slate-700 border border-slate-300 text-xs font-bold px-2 py-1 rounded-lg">1-100</button>
+                        <button onclick="setGridPage(2)" id="gridTab_2" class="grid-page-tab bg-white text-slate-700 border border-slate-300 text-xs font-bold px-2 py-1 rounded-lg">101-200</button>
+                        <button onclick="setGridPage(3)" id="gridTab_3" class="grid-page-tab bg-white text-slate-700 border border-slate-300 text-xs font-bold px-2 py-1 rounded-lg">201-300</button>
+                        <button onclick="setGridPage(4)" id="gridTab_4" class="grid-page-tab bg-white text-slate-700 border border-slate-300 text-xs font-bold px-2 py-1 rounded-lg">301-400</button>
+                        <button onclick="setGridPage(5)" id="gridTab_5" class="grid-page-tab bg-white text-slate-700 border border-slate-300 text-xs font-bold px-2 py-1 rounded-lg">401-500</button>
+                        <button onclick="setGridPage('RIGHT')" id="gridTab_RIGHT" class="grid-page-tab bg-emerald-100 text-emerald-800 border border-emerald-300 text-xs font-bold px-2 py-1 rounded-lg">Right</button>
+                        <button onclick="setGridPage('WRONG')" id="gridTab_WRONG" class="grid-page-tab bg-rose-100 text-rose-800 border border-rose-300 text-xs font-bold px-2 py-1 rounded-lg">Wrong</button>
+                        <button onclick="setGridPage('UNATTEMPTED')" id="gridTab_UNATTEMPTED" class="grid-page-tab bg-slate-200 text-slate-700 border border-slate-300 text-xs font-bold px-2 py-1 rounded-lg">Pending</button>
+                    </div>
+
+                    <!-- 500 Number Buttons Container -->
+                    <div id="numberBoxContainer" class="p-3 max-h-[430px] overflow-y-auto custom-scroll grid grid-cols-8 sm:grid-cols-10 gap-1.5 bg-slate-50">
+                        <!-- 1 to 500 Boxes dynamically rendered -->
+                    </div>
+
+                    <!-- Bottom Summary & Send Action inside Navigator -->
+                    <div class="p-3 bg-indigo-50 border-t border-indigo-200 flex flex-wrap items-center justify-between gap-2">
+                        <div class="text-xs font-bold text-indigo-950 telugu-text">
+                            <i class="fa-solid fa-circle-info text-indigo-600 mr-1"></i> మొత్తం 500 పూర్తి కాకపోయినా ఫలితాలు పంపవచ్చు!
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <button onclick="resetProgressConfirm()" class="text-xs font-bold text-rose-600 hover:underline px-2 py-1">
+                                Reset Marks
+                            </button>
+                            <button onclick="openEmailModal()" class="bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-extrabold px-3 py-1.5 rounded-xl shadow flex items-center gap-1">
+                                <i class="fa-solid fa-envelope"></i> Email to Sir
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- ================= EMAIL RESULTS MODAL (WORKS EVEN IF INCOMPLETE) ================= -->
+    <div id="emailModal" class="fixed inset-0 z-50 hidden bg-slate-900/75 backdrop-blur-sm flex items-center justify-center p-3 sm:p-4">
+        <div class="bg-white rounded-3xl max-w-xl w-full shadow-2xl border-4 border-emerald-500 overflow-hidden animate-fadeIn">
+            <div class="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-5 py-4 flex items-center justify-between">
+                <div class="flex items-center gap-2.5">
+                    <i class="fa-solid fa-paper-plane text-2xl text-amber-300"></i>
+                    <div>
+                        <h3 class="font-display font-extrabold text-lg sm:text-xl">Send Results to Teacher (Formspree)</h3>
+                        <p class="text-xs text-emerald-100">Endpoint: <strong>formspree.io/f/xbggkvjn</strong> &bull; <strong>balaswamysm@gmail.com</strong></p>
+                    </div>
+                </div>
+                <button onclick="closeEmailModal()" class="w-8 h-8 rounded-lg bg-white/20 hover:bg-white/30 flex items-center justify-center text-white">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <div class="p-5 space-y-4 max-h-[82vh] overflow-y-auto custom-scroll">
+                <div class="bg-amber-50 border-l-4 border-amber-500 p-3 rounded-r-xl text-xs sm:text-sm font-bold text-amber-950 telugu-text">
+                    <i class="fa-solid fa-circle-check text-emerald-600 mr-1"></i>
+                    గమనిక: మీరు 500 ప్రశ్నలు పూర్తి చేయకపోయినా సరే, ఇప్పటివరకు చేసిన ప్రశ్నల మార్కులను <strong>Formspree (balaswamysm@gmail.com)</strong> కు వెంటనే పంపవచ్చు!
+                </div>
+
+                <!-- Student Fields in Modal -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-xs font-extrabold text-slate-600 uppercase mb-1">Student Name (విద్యార్థి పేరు) *</label>
+                        <input type="text" id="modalStudentName" placeholder="Enter Full Name" class="w-full px-3 py-2 rounded-xl border-2 border-slate-300 focus:border-emerald-500 focus:outline-none font-bold text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-extrabold text-slate-600 uppercase mb-1">Class (తరగతి) *</label>
+                        <input type="text" id="modalStudentClass" placeholder="e.g. Class 7" class="w-full px-3 py-2 rounded-xl border-2 border-slate-300 focus:border-emerald-500 focus:outline-none font-bold text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-extrabold text-slate-600 uppercase mb-1">Roll No (రోల్ నంబర్)</label>
+                        <input type="text" id="modalStudentRoll" placeholder="e.g. Roll No 14" class="w-full px-3 py-2 rounded-xl border-2 border-slate-300 focus:border-emerald-500 focus:outline-none font-bold text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-extrabold text-slate-600 uppercase mb-1">Village (గ్రామం)</label>
+                        <input type="text" id="modalStudentVillage" placeholder="e.g. Paladugu" class="w-full px-3 py-2 rounded-xl border-2 border-slate-300 focus:border-emerald-500 focus:outline-none font-bold text-sm">
+                    </div>
+                </div>
+
+                <!-- Live Scorecard Preview -->
+                <div class="bg-slate-50 rounded-2xl p-3.5 border-2 border-slate-200 space-y-2">
+                    <div class="text-xs font-extrabold text-slate-500 uppercase">Scorecard Summary Being Sent:</div>
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center">
+                        <div class="bg-white p-2 rounded-xl border border-slate-200">
+                            <div class="text-[11px] font-bold text-slate-500">Attempted</div>
+                            <div id="modalAttempted" class="text-lg font-black text-indigo-700">0 / 500</div>
+                        </div>
+                        <div class="bg-emerald-50 p-2 rounded-xl border border-emerald-200">
+                            <div class="text-[11px] font-bold text-emerald-700">Right (ఒప్పు)</div>
+                            <div id="modalRight" class="text-lg font-black text-emerald-700">0</div>
+                        </div>
+                        <div class="bg-rose-50 p-2 rounded-xl border border-rose-200">
+                            <div class="text-[11px] font-bold text-rose-700">Wrong (తప్పు)</div>
+                            <div id="modalWrong" class="text-lg font-black text-rose-700">0</div>
+                        </div>
+                        <div class="bg-amber-50 p-2 rounded-xl border border-amber-200">
+                            <div class="text-[11px] font-bold text-amber-800">Percentage</div>
+                            <div id="modalPercent" class="text-lg font-black text-amber-800">0%</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Status Banner -->
+                <div id="emailStatusBanner" class="hidden p-3 rounded-xl text-xs sm:text-sm font-bold"></div>
+
+                <!-- 3 Guaranteed Ways to Send -->
+                <div class="space-y-2.5 pt-1">
+                    <button id="ajaxSendBtn" onclick="sendResultsViaCloudEmail()" class="w-full btn-3d-emerald text-white font-extrabold py-3 px-4 rounded-2xl flex items-center justify-center gap-2 text-sm sm:text-base">
+                        <i class="fa-solid fa-cloud-arrow-up text-lg"></i>
+                        <span>1. Submit Directly via Formspree (balaswamysm@gmail.com)</span>
+                    </button>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1">
+                        <button onclick="sendResultsViaMailto()" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-extrabold py-2.5 px-3 rounded-xl flex items-center justify-center gap-2 text-xs sm:text-sm shadow">
+                            <i class="fa-solid fa-envelope-open-text"></i>
+                            <span>Open Email App (Gmail/Mail)</span>
+                        </button>
+                        <button onclick="sendResultsViaWhatsApp()" class="w-full bg-green-600 hover:bg-green-700 text-white font-extrabold py-2.5 px-3 rounded-xl flex items-center justify-center gap-2 text-xs sm:text-sm shadow">
+                            <i class="fa-brands fa-whatsapp text-base"></i>
+                            <span>WhatsApp to 8555927854</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= CUSTOM CONFIRM / TOAST MODAL (NO NATIVE ALERT/CONFIRM) ================= -->
+    <div id="customDialogModal" class="fixed inset-0 z-50 hidden bg-slate-900/70 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-md w-full p-5 shadow-2xl border-4 border-indigo-500 text-center space-y-4">
+            <div class="w-14 h-14 rounded-2xl bg-amber-100 text-amber-600 flex items-center justify-center text-2xl mx-auto">
+                <i id="dialogIcon" class="fa-solid fa-shuffle"></i>
+            </div>
+            <h4 id="dialogTitle" class="font-display font-extrabold text-xl text-slate-900">Confirm Action</h4>
+            <p id="dialogMessage" class="text-sm text-slate-600 font-semibold telugu-text"></p>
+            <div class="flex items-center justify-center gap-3 pt-2">
+                <button onclick="closeCustomDialog()" class="px-4 py-2 rounded-xl bg-slate-200 hover:bg-slate-300 text-slate-800 font-extrabold text-sm">
+                    Cancel (వద్దు)
+                </button>
+                <button id="dialogConfirmBtn" class="px-5 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-extrabold text-sm shadow">
+                    Yes, Proceed (అవును)
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= JAVASCRIPT ENGINE ================= -->
+    <script>
+        /********************************************************************
+         * 1. NINE PRONOUN CATEGORIES - BILINGUAL LEARNING OBJECTS
+         ********************************************************************/
+        const PRONOUN_CATEGORIES = {
+            Personal: {
+                nameEn: "Personal Pronouns",
+                nameTe: "వ్యక్తిగత సర్వనామములు",
+                examples: "I (నేను), you (నీవు/మీరు), he (అతడు), she (ఆమె), it (అది/ఇది), we (మేము/మనము), they (వారు/అవి), me (నన్ను/నాకు), him (అతడిని), her (ఆమెను), us (మమ్మల్ని), them (వారిని)",
+                ruleTe: "మనుషులు, జంతువులు లేదా వస్తువుల పేర్లకు (Nouns) బదులుగా వాక్యంలో కర్తగా (Subject: I, we, you, he, she, it, they) లేదా కర్మగా (Object: me, us, you, him, her, it, them) వీటిని ఉపయోగిస్తారు.",
+                color: "blue"
+            },
+            Possessive: {
+                nameEn: "Possessive Pronouns",
+                nameTe: "స్వామ్య / హక్కును తెలిపే సర్వనామములు",
+                examples: "mine (నాది), yours (నీది/మీది), his (అతనిది), hers (ఆమెది), ours (మాది/మనది), theirs (వారిది)",
+                ruleTe: "ఒక వస్తువు ఎవరికి చెందినదో (Ownership/Belonging) చెప్పడానికి వీటిని వాడతారు. వీటి తర్వాత మళ్ళీ Noun రాదు (ఉదాహరణకు: This book is mine - ఈ పుస్తకం నాది).",
+                color: "emerald"
+            },
+            Demonstrative: {
+                nameEn: "Demonstrative Pronouns",
+                nameTe: "నిర్దేశక సర్వనామములు (చూపించేవి)",
+                examples: "this (ఇది - దగ్గర ఒకటి), that (అది - దూరం ఒకటి), these (ఇవి - దగ్గర బహువచనం), those (అవి - దూరం బహువచనం)",
+                ruleTe: "వస్తువులను లేదా వ్యక్తులను వేలితో చూపిస్తూ 'ఇది, అది, ఇవి, అవి' అని నిర్దిష్టంగా చెప్పడానికి వీటిని వాడతారు. దగ్గరగా ఉన్న ఒక వస్తువుకు This, దూరంగా ఉన్న ఒక వస్తువుకు That, దగ్గరగా ఉన్న ఎక్కువ వస్తువులకు These, దూరంగా ఉన్న ఎక్కువ వస్తువులకు Those వాడతాము.",
+                color: "amber"
+            },
+            Interrogative: {
+                nameEn: "Interrogative Pronouns",
+                nameTe: "ప్రశ్నార్థక సర్వనామములు",
+                examples: "who (ఎవరు - Subject), whom (ఎవరిని - Object), whose (ఎవరి యొక్క/ఎవరిది), which (ఏది), what (ఏమిటి)",
+                ruleTe: "ప్రశ్నలు అడగడానికి (To ask questions) ఉపయోగించే సర్వనామాలను Interrogative Pronouns అంటారు. వాక్యం చివర ఖచ్చితంగా ప్రశ్నార్థకం (?) ఉంటుంది.",
+                color: "purple"
+            },
+            Relative: {
+                nameEn: "Relative Pronouns",
+                nameTe: "సంబంధ సర్వనామములు",
+                examples: "who (ఎవరైతే), whom (ఎవరినైతే), whose (ఎవరిదైతే), which (ఏదైతే - వస్తువులు/జంతువులు), that (ఏదైతే/ఎవరైతే)",
+                ruleTe: "రెండు వాక్యాలను కలుపుతూ, ముందున్న నామవాచకానికి (Noun) సంబంధాన్ని తెలిపే పదాలను Relative Pronouns అంటారు. మనుషులకు 'who/whom/whose', జంతువులు మరియు వస్తువులకు 'which/that' వాడతారు.",
+                color: "indigo"
+            },
+            Indefinite: {
+                nameEn: "Indefinite Pronouns",
+                nameTe: "అనిశ్చిత సర్వనామములు",
+                examples: "anyone (ఎవరైనా), everyone (ప్రతి ఒక్కరూ), someone (ఎవరో ఒకరు), nobody (ఎవరూ కారు/లేరు), none (ఏదీ కాదు), several (కొన్ని/చాలా), everybody (అందరూ), something (ఏదో ఒకటి), many (చాలా మంది)",
+                ruleTe: "నిర్దిష్టంగా ఒక వ్యక్తి లేదా వస్తువు పేరు చెప్పకుండా సాధారణంగా అందరినీ లేదా ఎవరో ఒకరిని సూచించడానికి Indefinite Pronouns వాడతారు. Everyone, someone, nobody తర్వాత Singular verb (is/was/has) వస్తుంది.",
+                color: "rose"
+            },
+            Reflexive: {
+                nameEn: "Reflexive Pronouns",
+                nameTe: "ఆత్మార్థక సర్వనామములు",
+                examples: "myself (నన్ను నేనే), yourself (నిన్ను నీవే), himself (తనను తానే - పు), herself (తనను తానే - స్త్రీ), itself (దానిని అదే), ourselves (మమ్మల్ని మేమే), themselves (వారిని వారే), yourselves (మిమ్మల్ని మీరే)",
+                ruleTe: "వాక్యంలో పని చేసే కర్త (Subject) మరియు ఆ పని ఫలితాన్ని పొందే కర్మ (Object) ఇద్దరూ ఒక్కరే అయినప్పుడు, Verb (క్రియ) లేదా Preposition తర్వాత Reflexive Pronoun వాడతారు (ఉదా: He hurt himself).",
+                color: "teal"
+            },
+            Intensive: {
+                nameEn: "Intensive / Emphatic Pronouns",
+                nameTe: "నొక్కి చెప్పే సర్వనామములు (Emphasis)",
+                examples: "myself (నేనే స్వయంగా), himself (అతడే స్వయంగా), herself (ఆమె స్వయంగా), themselves (వారే స్వయంగా), yourself (నీవే స్వయంగా), ourselves (మేమే స్వయంగా)",
+                ruleTe: "పనిని వేరెవరో కాదు 'ఆ వ్యక్తే స్వయంగా చేశాడు' అని నొక్కి చెప్పడానికి (Emphasis) Subject పక్కనే వీటిని వాడతారు. ఉదా: 'I myself baked the cake' (నేనే స్వయంగా కేక్ తయారు చేశాను). దీనిని తీసేసినా వాక్యం అర్థం చెడిపోదు.",
+                color: "orange"
+            },
+            Reciprocal: {
+                nameEn: "Reciprocal Pronouns",
+                nameTe: "పరస్పర సర్వనామములు",
+                examples: "each other (ఒకరికొకరు - ఇద్దరి మధ్య), one another (ఒకరికొకరు - ఇద్దరి కంటే ఎక్కువ మంది మధ్య)",
+                ruleTe: "ఇద్దరు లేదా అంతకంటే ఎక్కువ మంది వ్యక్తులు పరస్పరం ఒకే పనిని ఒకరికొకరు చేసుకున్నప్పుడు Reciprocal Pronouns వాడతారు. ఇద్దరు వ్యక్తులైతే 'each other', ముగ్గురు లేదా అంతకంటే ఎక్కువ మంది అయితే 'one another' వాడాలి.",
+                color: "cyan"
+            }
+        };
+
+        /********************************************************************
+         * 2. GENERATOR FOR 500 RICH, PEDAGOGICAL BILINGUAL QUESTIONS
+         *    Covers all 9 Pronoun Categories & 5 Creative Exercise Formats
+         ********************************************************************/
+        function buildMaster500Questions() {
+            const list = [];
+
+            // Helper to add a question with guaranteed 4 bilingual options & rich Telugu explanation
+            function addQ(cat, section, promptEnTe, subTe, correctOpt, distractors, ruleFocusTe, specificDetailTe) {
+                const allOpts = [correctOpt, ...distractors.slice(0, 3)];
+                list.push({
+                    originalId: list.length + 1,
+                    category: cat,
+                    section: section, // 'MCQ', 'GUESS', 'TF', 'MATCH', 'REPLACE'
+                    prompt: promptEnTe,
+                    subTe: subTe,
+                    correctAnswer: correctOpt,
+                    rawOptions: allOpts,
+                    ruleFocusTe: ruleFocusTe,
+                    specificDetailTe: specificDetailTe
+                });
+            }
+
+            // =========================================================================
+            // DATA POOLS FOR HIGH-VARIETY CHILD-FRIENDLY SCENARIOS (PALADUGU / SCHOOL / DAILY LIFE)
+            // =========================================================================
+            const boys = [
+                { en: "Raju", te: "రాజు" }, { en: "Kiran", te: "కిరణ్" }, { en: "Chintu", te: "చింటూ" },
+                { en: "Naveen", te: "నవీన్" }, { en: "Tarun", te: "తరుణ్" }, { en: "Vamsi", te: "వంశీ" },
+                { en: "Gopi", te: "గోపి" }, { en: "Suresh", te: "సురేష్" }, { en: "Anil", te: "అనిల్" },
+                { en: "charan", te: "చరణ్" }
+            ];
+            const girls = [
+                { en: "Sita", te: "సీత" }, { en: "Rani", te: "రాణి" }, { en: "Kavya", te: "కావ్య" },
+                { en: "Divya", te: "దివ్య" }, { en: "Lakshmi", te: "లక్ష్మి" }, { en: "Swathi", te: "స్వాతి" },
+                { en: "Meena", te: "మీనా" }, { en: "Pooja", te: "పూజ" }, { en: "Haritha", te: "హరిత" },
+                { en: "Sneha", te: "స్నేహ" }
+            ];
+            const thingsSingular = [
+                { en: "the mango", te: "మామిడి పండు" }, { en: "the bicycle", te: "సైకిల్" },
+                { en: "the storybook", te: "కథల పుస్తకం" }, { en: "the puppy", te: "కుక్కపిల్ల" },
+                { en: "the school bell", te: "పాఠశాల గంట" }, { en: "the cricket bat", te: "క్రికెట్ బ్యాట్" },
+                { en: "the peacock", te: "నెమలి" }, { en: "the umbrella", te: "గొడుగు" },
+                { en: "the red balloon", te: "ఎర్ర బెలూన్" }, { en: "the water bottle", te: "నీళ్ళ సీసా" }
+            ];
+            const thingsPlural = [
+                { en: "the mangoes", te: "మామిడి పండ్లు" }, { en: "the colourful birds", te: "రంగురంగుల పక్షులు" },
+                { en: "the new notebooks", te: "కొత్త నోట్ పుస్తకాలు" }, { en: "the bright stars", te: "మెరిసే నక్షత్రాలు" },
+                { en: "the sweet chocolates", te: "తీపి చాక్లెట్లు" }, { en: "the green trees", te: "పచ్చని చెట్లు" },
+                { en: "the school buses", te: "స్కూల్ బస్సులు" }, { en: "the white rabbits", te: "తెల్ల కుందేళ్ళు" }
+            ];
+            const actionsBoys = [
+                { vEn: "is reading a lesson", vTe: "పాఠం చదువుతున్నాడు" },
+                { vEn: "won the first prize", vTe: "మొదటి బహుమతి గెలుచుకున్నాడు" },
+                { vEn: "rides a bicycle to Jacob Gapp School", vTe: "జాకబ్ గాప్ స్కూల్‌కు సైకిల్‌పై వెళ్తాడు" },
+                { vEn: "plays football every evening", vTe: "ప్రతి సాయంత్రం ఫుట్‌బాల్ ఆడతాడు" },
+                { vEn: "helped the old man", vTe: "ముసలి తాతకు సహాయం చేశాడు" },
+                { vEn: "draws beautiful pictures", vTe: "అందమైన బొమ్మలు గీస్తాడు" }
+            ];
+            const actionsGirls = [
+                { vEn: "sings Telugu songs sweetly", vTe: "తెలుగు పాటలు తియ్యగా పాడుతుంది" },
+                { vEn: "completed the homework neatly", vTe: "హోంవర్క్ అందంగా పూర్తి చేసింది" },
+                { vEn: "waters the garden plants daily", vTe: "రోజూ తోటలోని మొక్కలకు నీళ్ళు పోస్తుంది" },
+                { vEn: "dances gracefully on stage", vTe: "వేదికపై చక్కగా నాట్యం చేస్తుంది" },
+                { vEn: "shares lunch with friends", vTe: "స్నేహితులతో భోజనం పంచుకుంటుంది" },
+                { vEn: "solves math puzzles quickly", vTe: "లెక్కల పజిల్స్ వేగంగా చేస్తుంది" }
+            ];
+
+            // -------------------------------------------------------------------------
+            // CATEGORY 1: PERSONAL PRONOUNS (70 Questions across MCQ, REPLACE, GUESS, TF, MATCH)
+            // -------------------------------------------------------------------------
+            // 1A: Replace Male Subject -> He (అతడు) [10 Qs]
+            for (let i = 0; i < 10; i++) {
+                const b = boys[i];
+                const act = actionsBoys[i % actionsBoys.length];
+                addQ(
+                    "Personal",
+                    i % 2 === 0 ? "REPLACE" : "MCQ",
+                    `[${b.en} (${b.te})] ${act.vEn}. ___ is a clever boy. (గీత గీసిన '${b.en}' కు బదులుగా సరైన Personal Pronoun ఎంచుకోండి)`,
+                    `తెలుగు అర్థం: ${b.te} ${act.vTe}. అతడు తెలివైన బాలుడు.`,
+                    "He (అతడు)",
+                    ["She (ఆమె)", "It (అది)", "They (వారు)"],
+                    "ఒక అబ్బాయి లేదా పురుషుడి పేరుకు (Singular Male Subject) బదులుగా 'He (అతడు)' అనే Personal Pronoun వాడాలి.",
+                    `ఇక్కడ '${b.en} (${b.te})' అనేది ఒక అబ్బాయి పేరు (Singular Masculine Noun). కాబట్టి దానికి బదులుగా కర్త స్థానంలో 'He (అతడు)' వస్తుంది. 'She (ఆమె)' అమ్మాయిలకు, 'It (అది)' వస్తువులకు/జంతువులకు, 'They (వారు)' బహువచనానికి వాడతారు.`
+                );
+            }
+
+            // 1B: Replace Female Subject -> She (ఆమె) [10 Qs]
+            for (let i = 0; i < 10; i++) {
+                const g = girls[i];
+                const act = actionsGirls[i % actionsGirls.length];
+                addQ(
+                    "Personal",
+                    i % 2 === 0 ? "MCQ" : "REPLACE",
+                    `[${g.en} (${g.te})] ${act.vEn}. ___ always speaks politely. ('${g.en}' కు బదులుగా సరైన సర్వనామం ఏది?)`,
+                    `తెలుగు అర్థం: ${g.te} ${act.vTe}. ఆమె ఎల్లప్పుడూ మర్యాదగా మాట్లాడుతుంది.`,
+                    "She (ఆమె)",
+                    ["He (అతడు)", "Him (అతడిని)", "Us (మమ్మల్ని)"],
+                    "ఒక అమ్మాయి లేదా స్త్రీ పేరుకు (Singular Female Subject) బదులుగా 'She (ఆమె)' అనే Personal Pronoun వాడాలి.",
+                    `ఈ వాక్యంలో '${g.en} (${g.te})' ఒక అమ్మాయి పేరు. వాక్యం మొదట్లో పని చేసే కర్తగా (Subject) ఉంది కాబట్టి 'She (ఆమె)' సరైన సమాధానం.`
+                );
+            }
+
+            // 1C: Replace Singular Thing/Animal -> It (అది/ఇది) [10 Qs]
+            for (let i = 0; i < 10; i++) {
+                const th = thingsSingular[i];
+                addQ(
+                    "Personal",
+                    "REPLACE",
+                    `Look at [${th.en} (${th.te})]. ___ looks very nice! ('${th.en}' కు బదులుగా ఏ Pronoun వాడాలి?)`,
+                    `తెలుగు అర్థం: ఆ ${th.te} వైపు చూడండి. అది చాలా బాగుంది!`,
+                    "It (అది / ఇది)",
+                    ["He (అతడు)", "She (ఆమె)", "They (అవి / వారు)"],
+                    "ఏకవచనంలో ఉన్న వస్తువు, పండు, లేదా జంతువు (Singular Thing/Animal) గురించి చెప్పేటప్పుడు 'It (అది/ఇది)' వాడాలి.",
+                    `ఇక్కడ '${th.en} (${th.te})' అనేది ఒకే ఒక వస్తువు/జీవి (Singular Neuter). కాబట్టి దానికి బదులుగా 'It (అది/ఇది)' మాత్రమే సరైనది.`
+                );
+            }
+
+            // 1D: Plural People ("My friend and I" -> We / "Two friends" -> They) [14 Qs]
+            for (let i = 0; i < 7; i++) {
+                const b = boys[i];
+                const g = girls[i];
+                addQ(
+                    "Personal",
+                    "MCQ",
+                    `[${b.en} and I (${b.te} మరియు నేను)] study in Jacob Gapp School. ___ love our school very much. (ఖాళీని పూరించండి)`,
+                    `తెలుగు అర్థం: ${b.te} మరియు నేను జాకబ్ గాప్ స్కూల్‌లో చదువుతున్నాము. మేము మా పాఠశాలను చాలా ప్రేమిస్తాము.`,
+                    "We (మేము / మనము)",
+                    ["They (వారు)", "He (అతడు)", "Me (నన్ను)"],
+                    "ఇతరులతో పాటు 'I (నేను)' కూడా కలిసినప్పుడు ('... and I'), దానికి బదులుగా కర్త స్థానంలో 'We (మేము/మనము)' వాడాలి.",
+                    `వాక్యంలో '${b.en} and I (${b.te} మరియు నేను)' అని ఉంది. మాట్లాడే వ్యక్తి (నేను) అందులో ఉన్నాడు కాబట్టి బహువచనంలో 'We (మేము/మనము)' వస్తుంది.`
+                );
+                addQ(
+                    "Personal",
+                    "REPLACE",
+                    `[${b.en} and ${g.en} (${b.te} మరియు ${g.te})] are going to the library. ___ want to read storybooks.`,
+                    `తెలుగు అర్థం: ${b.te} మరియు ${g.te} లైబ్రరీకి వెళ్తున్నారు. వారు కథల పుస్తకాలు చదవాలనుకుంటున్నారు.`,
+                    "They (వారు)",
+                    ["We (మేము)", "She (ఆమె)", "Him (అతడిని)"],
+                    "ఇద్దరు లేదా అంతకంటే ఎక్కువ మంది వ్యక్తుల గురించి (మనం అందులో లేనప్పుడు - Third Person Plural) చెప్పేటప్పుడు 'They (వారు)' వాడాలి.",
+                    `ఇక్కడ '${b.en} మరియు ${g.en}' ఇద్దరు వ్యక్తులు (Plural). కాబట్టి వారికి బదులుగా 'They (వారు)' అనే Personal Pronoun సరైనది.`
+                );
+            }
+
+            // 1E: Object Pronouns (me, him, her, us, them) [16 Qs]
+            const objScenarios = [
+                { p: "I am hungry. Please give ___ (నాకు) a banana.", te: "నాకు ఆకలిగా ఉంది. దయచేసి నాకు ఒక అరటిపండు ఇవ్వండి.", ans: "me (నాకు / నన్ను)", d: ["I (నేను)", "my (నా యొక్క)", "we (మేము)"], exp: "క్రియ (give) తర్వాత Object స్థానంలో 'I' కి బదులుగా 'me (నాకు/నన్ను)' వాడాలి." },
+                { p: "Raju is my best friend. Teacher praised ___ (అతడిని) in the class.", te: "రాజు నా ప్రాణ స్నేహితుడు. టీచర్ తరగతిలో అతడిని మెచ్చుకున్నారు.", ans: "him (అతడిని / అతనికి)", d: ["he (అతడు)", "she (ఆమె)", "they (వారు)"], exp: "రాజు (He) కర్మ స్థానంలో (Object after verb 'praised') ఉన్నప్పుడు 'him (అతడిని)' అవుతుంది." },
+                { p: "Sita lost her pencil, so I gave ___ (ఆమెకు) a new pencil.", te: "సీత తన పెన్సిల్ పోగొట్టుకుంది, అందుకే నేను ఆమెకు కొత్త పెన్సిల్ ఇచ్చాను.", ans: "her (ఆమెకు / ఆమెను)", d: ["she (ఆమె)", "he (అతడు)", "him (అతడిని)"], exp: "ఆమెకు/ఆమెను అని Object స్థానంలో చెప్పడానికి 'her' వాడతాము." },
+                { p: "We are ready for the game. Come and join ___ (మమ్మల్ని/మాతో)!", te: "మేము ఆటకు సిద్ధంగా ఉన్నాము. వచ్చి మాతో (మమ్మల్ని) కలవండి!", ans: "us (మమ్మల్ని / మాకు)", d: ["we (మేము)", "our (మా యొక్క)", "they (వారు)"], exp: "'We (మేము)' అనేది Verb (join) తర్వాత Object స్థానంలో వచ్చినప్పుడు 'us (మమ్మల్ని/మాకు)' గా మారుతుంది." },
+                { p: "The children are playing outside. Call ___ (వారిని) for dinner.", te: "పిల్లలు బయట ఆడుకుంటున్నారు. భోజనానికి వారిని పిలవండి.", ans: "them (వారిని / వారికి)", d: ["they (వారు)", "we (మేము)", "he (అతడు)"], exp: "'The children (They)' అనే బహువచనాన్ని పిలవండి (Call) అనే క్రియ తర్వాత Object గా వాడినప్పుడు 'them (వారిని)' వాడాలి." },
+                { p: "My father bought a gift for ___ (నా కోసం).", te: "మా నాన్న నా కోసం ఒక బహుమతి కొన్నారు.", ans: "me (నాకు / నా కోసం)", d: ["I (నేను)", "we (మేము)", "he (అతడు)"], exp: "'for' అనే Preposition తర్వాత ఎప్పుడూ Object Pronoun ('me') రావాలి, Subject Pronoun ('I') రాకూడదు." },
+                { p: "Our teacher Mr. Balaswamy teaches ___ (మాకు) English grammar very clearly.", te: "మా ఉపాధ్యాయులు బాలస్వామి గారు మాకు ఇంగ్లీష్ గ్రామర్ చాలా స్పష్టంగా బోధిస్తారు.", ans: "us (మాకు / మమ్మల్ని)", d: ["we (మేము)", "they (వారు)", "I (నేను)"], exp: "'teaches' అనే క్రియ తర్వాత 'మాకు' అని చెప్పడానికి 'us' అనే Object Pronoun వాడాలి." },
+                { p: "Where are the mangoes? I put ___ (వాటిని) on the table.", te: "మామిడి పండ్లు ఎక్కడ ఉన్నాయి? నేను వాటిని టేబుల్ మీద పెట్టాను.", ans: "them (వాటిని / వారిని)", d: ["it (దానిని)", "they (అవి)", "he (అతడు)"], exp: "మామిడి పండ్లు (mangoes) బహువచనం కాబట్టి కర్మ స్థానంలో 'them (వాటిని)' వాడాలి." }
+            ];
+            for (let i = 0; i < 16; i++) {
+                const sc = objScenarios[i % objScenarios.length];
+                addQ(
+                    "Personal",
+                    i < 8 ? "MCQ" : "GUESS",
+                    i < 8 ? sc.p : `[Pronoun Riddle / పొడుపు కథ]: ${sc.p} (సరైన Object Pronoun ను ఊహించండి)`,
+                    `తెలుగు అర్థం: ${sc.te}`,
+                    sc.ans,
+                    sc.d,
+                    sc.exp,
+                    `ఈ వాక్యంలో క్రియ (Verb) లేదా విభక్తి (Preposition) తర్వాత వచ్చే కర్మ (Object) స్థానం ఖాళీగా ఉంది. కాబట్టి '${sc.ans}' సరైన సమాధానం.`
+                );
+            }
+
+            // 1F: Personal Pronoun True/False & Match [10 Qs]
+            for (let i = 0; i < 10; i++) {
+                const isTrue = i % 2 === 0;
+                const b = boys[i];
+                if (isTrue) {
+                    addQ(
+                        "Personal",
+                        "TF",
+                        `TRUE or FALSE: In the sentence "She (ఆమె) is reading a book", the word "She" is a Personal Pronoun (వ్యక్తిగత సర్వనామము).`,
+                        `తెలుగు ప్రశ్న: "She is reading a book" అనే వాక్యంలో "She (ఆమె)" అనేది Personal Pronoun. ఇది నిజమా (True) లేక అబద్ధమా (False)?`,
+                        "True (నిజం / ఒప్పు)",
+                        ["False (అబద్ధం / తప్పు)", "Cannot say (చెప్పలేము)", "None (ఏదీ కాదు)"],
+                        "'I, we, you, he, she, it, they' అనేవి వ్యక్తులకు బదులుగా వాడే Personal Pronouns.",
+                        `అవును, ఇది పూర్తిగా నిజం (True)! 'She (ఆమె)' అనేది ఒక అమ్మాయి పేరుకు బదులుగా వాడే Third Person Singular Personal Pronoun.`
+                    );
+                } else {
+                    addQ(
+                        "Personal",
+                        "TF",
+                        `TRUE or FALSE: For a single boy like "${b.en} (${b.te})", we should use the pronoun "They (వారు)".`,
+                        `తెలుగు ప్రశ్న: "${b.en} (${b.te})" అనే ఒకే ఒక అబ్బాయికి బదులుగా "They (వారు)" అనే సర్వనామం వాడాలి. ఇది నిజమా లేక అబద్ధమా?`,
+                        "False (అబద్ధం / తప్పు)",
+                        ["True (నిజం / ఒప్పు)", "Always True (ఎప్పుడూ నిజమే)", "Both (రెండూ)"],
+                        "ఒక అబ్బాయికి 'He (అతడు)' వాడాలి కానీ బహువచనానికి వాడే 'They (వారు)' వాడకూడదు.",
+                        `ఇది తప్పు (False)! '${b.en} (${b.te})' ఒక్కడే అబ్బాయి (Singular Male) కాబట్టి 'He (అతడు)' వాడాలి. 'They (వారు)' ఇద్దరు లేదా అంతకంటే ఎక్కువ మందికి వాడతారు.`
+                    );
+                }
+            }
+
+            // -------------------------------------------------------------------------
+            // CATEGORY 2: POSSESSIVE PRONOUNS (60 Questions: mine, yours, his, hers, ours, theirs)
+            // -------------------------------------------------------------------------
+            const possItems = [
+                { itemEn: "blue pen", itemTe: "నీలం కలం" },
+                { itemEn: "school bag", itemTe: "స్కూల్ బ్యాగ్" },
+                { itemEn: "lunch box", itemTe: "లంచ్ బాక్స్" },
+                { itemEn: "drawing book", itemTe: "బొమ్మల పుస్తకం" },
+                { itemEn: "new bicycle", itemTe: "కొత్త సైకిల్" },
+                { itemEn: "geometry box", itemTe: "జామెట్రీ బాక్స్" },
+                { itemEn: "green umbrella", itemTe: "ఆకుపచ్చ గొడుగు" },
+                { itemEn: "cricket bat", itemTe: "క్రికెట్ బ్యాట్" },
+                { itemEn: "story book", itemTe: "కథల పుస్తకం" },
+                { itemEn: "water bottle", itemTe: "నీళ్ళ సీసా" }
+            ];
+
+            // 2A: "mine (నాది)" & "yours (నీది/మీది)" [20 Qs]
+            for (let i = 0; i < 10; i++) {
+                const it = possItems[i];
+                addQ(
+                    "Possessive",
+                    i % 2 === 0 ? "MCQ" : "GUESS",
+                    `I bought this ${it.itemEn} (${it.itemTe}). So, this ${it.itemEn} is ___ (నాది).`,
+                    `తెలుగు అర్థం: నేను ఈ ${it.itemTe} కొన్నాను. కాబట్టి, ఈ ${it.itemTe} నాది (mine).`,
+                    "mine (నాది)",
+                    ["me (నన్ను)", "I (నేను)", "yours (నీది)"],
+                    "ఒక వస్తువు 'నాకు చెందినది / నాది' అని వాక్యం చివర Noun లేకుండా చెప్పడానికి 'mine (నాది)' అనే Possessive Pronoun వాడాలి.",
+                    `ఇక్కడ 'నేను కొన్నాను (I bought)' అని ఉంది కాబట్టి ఆ ${it.itemTe} 'నాది (mine)' అవుతుంది. గమనిక: 'my' తర్వాత Noun రావాలి (my pen), కానీ 'mine' తర్వాత Noun రాదు (This pen is mine).`
+                );
+
+                addQ(
+                    "Possessive",
+                    i % 2 === 0 ? "REPLACE" : "MCQ",
+                    `You brought this ${it.itemEn} (${it.itemTe}). Is this ${it.itemEn} ___ (నీదా / మీదా)?`,
+                    `తెలుగు అర్థం: నీవు ఈ ${it.itemTe} తెచ్చావు. ఈ ${it.itemTe} నీదా (yours)?`,
+                    "yours (నీది / మీది)",
+                    ["you (నీవు)", "mine (నాది)", "theirs (వారిది)"],
+                    "'నీది లేదా మీది' అని హక్కును (Ownership) తెలపడానికి 'yours' అనే Possessive Pronoun వాడాలి.",
+                    `వాక్యంలో 'You (నీవు)' అని ఉంది కాబట్టి నీకు చెందిన వస్తువును 'yours (నీది/మీది)' అంటారు. ('yours' లో ఎప్పుడూ apostrophe ' రాదు!).`
+                );
+            }
+
+            // 2B: "his (అతనిది)" & "hers (ఆమెది)" [20 Qs]
+            for (let i = 0; i < 10; i++) {
+                const b = boys[i];
+                const g = girls[i];
+                const it = possItems[i];
+                addQ(
+                    "Possessive",
+                    "MCQ",
+                    `This ${it.itemEn} belongs to ${b.en} (${b.te}). It is ___ (అతనిది).`,
+                    `తెలుగు అర్థం: ఈ ${it.itemTe} ${b.te} కు చెందినది. ఇది అతనిది (his).`,
+                    "his (అతనిది)",
+                    ["hers (ఆమెది)", "him (అతడిని)", "ours (మాది)"],
+                    "ఒక అబ్బాయికి చెందిన వస్తువు అని చెప్పడానికి 'his (అతనిది)' అనే Possessive Pronoun వాడాలి.",
+                    `'${b.en} (${b.te})' అబ్బాయి కాబట్టి అతనికి చెందిన వస్తువును 'his (అతనిది)' అని పిలుస్తాము.`
+                );
+
+                addQ(
+                    "Possessive",
+                    "MCQ",
+                    `That ribbon and ${it.itemEn} belong to ${g.en} (${g.te}). They are ___ (ఆమెవి / ఆమెది).`,
+                    `తెలుగు అర్థం: ఆ రిబ్బన్ మరియు ${it.itemTe} ${g.te} కు చెందినవి. అవి ఆమెవి (hers).`,
+                    "hers (ఆమెది / ఆమెవి)",
+                    ["she (ఆమె)", "his (అతనిది)", "mine (నాది)"],
+                    "ఒక అమ్మాయికి చెందిన వస్తువు అని Noun లేకుండా చెప్పడానికి 'hers (ఆమెది)' అనే Possessive Pronoun వాడాలి.",
+                    `'${g.en} (${g.te})' అమ్మాయి. ఆమెకు చెందినది అని వాక్యం చివర చెప్పడానికి 'hers (ఆమెది)' వాడాలి. ('her' తర్వాత Noun రావాలి, కానీ 'hers' ఒంటరిగా వస్తుంది).`
+                );
+            }
+
+            // 2C: "ours (మాది/మనది)" & "theirs (వారిది)" + Match/TF [20 Qs]
+            for (let i = 0; i < 10; i++) {
+                const it = possItems[i];
+                addQ(
+                    "Possessive",
+                    i < 5 ? "MCQ" : "MATCH",
+                    `We built this garden in Jacob Gapp School. This beautiful garden is ___ (మాది / మనది).`,
+                    `తెలుగు అర్థం: మేము జాకబ్ గాప్ స్కూల్‌లో ఈ తోటను నిర్మించాము. ఈ అందమైన తోట మాది (ours). (V-${i + 1})`,
+                    "ours (మాది / మనది)",
+                    ["we (మేము)", "us (మమ్మల్ని)", "theirs (వారిది)"],
+                    "'We (మేము/మనము)' కు సంబంధించిన Possessive Pronoun 'ours (మాది/మనది)'.",
+                    `వాక్యంలో 'We (మేము)' అని ఉంది కాబట్టి మనందరికీ చెందిన తోటను 'ours (మాది/మనది)' అని చెబుతాము.`
+                );
+
+                addQ(
+                    "Possessive",
+                    i < 5 ? "REPLACE" : "TF",
+                    `Those players won the trophy. The golden trophy is ___ (వారిది). (Choose the Possessive Pronoun for '${it.itemEn}')`,
+                    `తెలుగు అర్థం: ఆ ఆటగాళ్ళు ట్రోఫీని గెలుచుకున్నారు. ఆ బంగారు ట్రోఫీ వారిది (theirs).`,
+                    "theirs (వారిది / వారివి)",
+                    ["them (వారిని)", "they (వారు)", "mine (నాది)"],
+                    "'They (వారు)' కు సంబంధించిన Possessive Pronoun 'theirs (వారిది)'.",
+                    `ఆ ఆటగాళ్ళు (Those players = They) బహువచనం. వారికి చెందినది అని చెప్పడానికి 'theirs (వారిది)' అనే Possessive Pronoun వాడాలి.`
+                );
+            }
+
+            // -------------------------------------------------------------------------
+            // CATEGORY 3: DEMONSTRATIVE PRONOUNS (55 Questions: this, that, these, those)
+            // -------------------------------------------------------------------------
+            // 3A: Near Singular -> This (ఇది) [14 Qs]
+            for (let i = 0; i < 14; i++) {
+                const th = thingsSingular[i % thingsSingular.length];
+                addQ(
+                    "Demonstrative",
+                    i % 2 === 0 ? "MCQ" : "GUESS",
+                    `___ (ఇది - నా చేతిలో దగ్గరగా ఉన్న ఒక వస్తువు) is ${th.en} (${th.te}) right here in my hand.`,
+                    `తెలుగు అర్థం: ఇప్పుడు నా చేతిలో దగ్గరగా ఉన్న ఇది (This) ఒక ${th.te}.`,
+                    "This (ఇది - దగ్గర ఏకవచనం)",
+                    ["That (అది - దూరం ఏకవచనం)", "These (ఇవి - దగ్గర బహువచనం)", "Those (అవి - దూరం బహువచనం)"],
+                    "మనకు దగ్గరగా (Near/Here) ఉన్న ఒకే ఒక వస్తువును (Singular) చూపించడానికి 'This (ఇది)' అనే Demonstrative Pronoun వాడాలి.",
+                    `వాక్యంలో 'right here in my hand (నా చేతిలో దగ్గరగా)' అని మరియు 'is (ఏకవచనం)' అని ఉంది. దగ్గరగా ఉన్న ఒక్క వస్తువుకు 'This (ఇది)' మాత్రమే వాడాలి.`
+                );
+            }
+
+            // 3B: Far Singular -> That (అది) [14 Qs]
+            for (let i = 0; i < 14; i++) {
+                const th = thingsSingular[i % thingsSingular.length];
+                addQ(
+                    "Demonstrative",
+                    i % 2 === 0 ? "MCQ" : "MATCH",
+                    `Look over there far away! ___ (అది - దూరంగా ఉన్న ఒక వస్తువు) is ${th.en} (${th.te}).`,
+                    `తెలుగు అర్థం: అటువైపు దూరంగా చూడండి! అక్కడ ఉన్న అది (That) ${th.te}.`,
+                    "That (అది - దూరం ఏకవచనం)",
+                    ["This (ఇది - దగ్గర ఏకవచనం)", "These (ఇవి - దగ్గర బహువచనం)", "Those (అవి - దూరం బహువచనం)"],
+                    "మనకు దూరంగా (Far/Over there) ఉన్న ఒకే ఒక వస్తువును (Singular) చూపించడానికి 'That (అది)' అనే Demonstrative Pronoun వాడాలి.",
+                    `వాక్యంలో 'over there far away (అక్కడ దూరంగా)' మరియు 'is (ఒక వస్తువు)' అని ఉంది. దూరంగా ఉన్న ఏకవచన వస్తువుకు 'That (అది)' సరైనది.`
+                );
+            }
+
+            // 3C: Near Plural -> These (ఇవి) [14 Qs]
+            for (let i = 0; i < 14; i++) {
+                const thp = thingsPlural[i % thingsPlural.length];
+                addQ(
+                    "Demonstrative",
+                    i % 2 === 0 ? "MCQ" : "GUESS",
+                    `___ (ఇవి - ఇక్కడ దగ్గరగా ఉన్న బహువచన వస్తువులు) are ${thp.en} (${thp.te}) right here on my desk.`,
+                    `తెలుగు అర్థం: ఇక్కడ నా డెస్క్ మీద దగ్గరగా ఉన్న ఇవి (These) ${thp.te}.`,
+                    "These (ఇవి - దగ్గర బహువచనం)",
+                    ["This (ఇది - దగ్గర ఏకవచనం)", "That (అది - దూరం ఏకవచనం)", "Those (అవి - దూరం బహువచనం)"],
+                    "మనకు దగ్గరగా (Here/Near) ఉన్న రెండు లేదా అంతకంటే ఎక్కువ వస్తువులను (Plural) చూపించడానికి 'These (ఇవి)' వాడాలి.",
+                    `ఇక్కడ 'right here (దగ్గరగా)' మరియు 'are ${thp.en} (బహువచనం)' అని ఉన్నాయి. కాబట్టి దగ్గర బహువచనానికి 'These (ఇవి)' సరైన Demonstrative Pronoun.`
+                );
+            }
+
+            // 3D: Far Plural -> Those (అవి) [13 Qs]
+            for (let i = 0; i < 13; i++) {
+                const thp = thingsPlural[i % thingsPlural.length];
+                addQ(
+                    "Demonstrative",
+                    i % 2 === 0 ? "MCQ" : "TF",
+                    `Look high up in the sky over there! ___ (అవి - దూరంగా ఉన్న బహువచనం) are ${thp.en} (${thp.te}).`,
+                    `తెలుగు అర్థం: అక్కడ దూరంగా ఆకాశంలో/బయట చూడండి! అవి (Those) ${thp.te}.`,
+                    "Those (అవి - దూరం బహువచనం)",
+                    ["These (ఇవి - దగ్గర బహువచనం)", "This (ఇది - దగ్గర ఏకవచనం)", "That (అది - దూరం ఏకవచనం)"],
+                    "మనకు దూరంగా (Over there/Far) ఉన్న ఎక్కువ వస్తువులను (Plural) వేలితో చూపిస్తూ చెప్పడానికి 'Those (అవి)' వాడాలి.",
+                    `వాక్యంలో 'over there (అక్కడ దూరంగా)' మరియు 'are (బహువచనం)' ఉన్నాయి. కాబట్టి దూరంగా ఉన్న బహువచన వస్తువులకు 'Those (అవి)' సరైన సమాధానం.`
+                );
+            }
+
+            // -------------------------------------------------------------------------
+            // CATEGORY 4: INTERROGATIVE PRONOUNS (55 Questions: who, whom, whose, which, what)
+            // -------------------------------------------------------------------------
+            const interScenarios = [
+                {
+                    q: "___ (ఎవరు) is the Headmaster of Jacob Gapp School, Paladugu?",
+                    te: "పాలడుగులోని జాకబ్ గాప్ స్కూల్ ప్రధానోపాధ్యాయులు ఎవరు (Who)?",
+                    ans: "Who (ఎవరు - వ్యక్తులకు కర్తగా)",
+                    d: ["Which (ఏది)", "Whose (ఎవరిది)", "What (ఏమిటి)"],
+                    rule: "మనుషుల గురించి 'ఎవరు (Subject)' అని ప్రశ్నించడానికి 'Who' అనే Interrogative Pronoun వాడాలి."
+                },
+                {
+                    q: "___ (ఎవరిది / ఎవరి యొక్క) is this neat notebook lying on the teacher's table?",
+                    te: "టీచర్ టేబుల్ మీద ఉన్న ఈ చక్కని నోట్ పుస్తకం ఎవరిది (Whose)?",
+                    ans: "Whose (ఎవరిది / ఎవరి యొక్క)",
+                    d: ["Who (ఎవరు)", "Whom (ఎవరిని)", "What (ఏమిటి)"],
+                    rule: "ఒక వస్తువు 'ఎవరికి చెందినది / ఎవరిది (Ownership)' అని ప్రశ్న అడగడానికి 'Whose' వాడాలి."
+                },
+                {
+                    q: "To ___ (ఎవరికి / ఎవరిని) did you give the English textbook yesterday?",
+                    te: "నిన్న నీవు ఇంగ్లీష్ పాఠ్యపుస్తకాన్ని ఎవరికి (To whom) ఇచ్చావు?",
+                    ans: "whom (ఎవరిని / ఎవరికి - Object)",
+                    d: ["who (ఎవరు)", "whose (ఎవరిది)", "which (ఏది)"],
+                    rule: "మనుషుల గురించి Object స్థానంలో (ముఖ్యంగా 'To / With / For' తర్వాత) 'ఎవరిని / ఎవరికి' అని అడగడానికి 'Whom' వాడాలి."
+                },
+                {
+                    q: "___ (ఏది - కొన్నింటిలో ఎంచుకునేటప్పుడు) of these two storybooks do you like more?",
+                    te: "ఈ రెండు కథల పుస్తకాలలో నీకు ఏది (Which) ఎక్కువ ఇష్టం?",
+                    ans: "Which (ఏది - ఎంపిక/Choice)",
+                    d: ["Who (ఎవరు)", "Whom (ఎవరిని)", "Whose (ఎవరిది)"],
+                    rule: "ఉన్న కొన్ని వస్తువులలో 'ఏది (Choice between options)' అని ఎంచుకునే ప్రశ్నకు 'Which' వాడాలి."
+                },
+                {
+                    q: "___ (ఏమిటి) is your favourite game to play in the school ground?",
+                    te: "పాఠశాల మైదానంలో ఆడుకోవడానికి నీకు ఇష్టమైన ఆట ఏమిటి (What)?",
+                    ans: "What (ఏమిటి)",
+                    d: ["Who (ఎవరు)", "Whom (ఎవరిని)", "Whose (ఎవరిది)"],
+                    rule: "ఒక విషయం లేదా వస్తువు గురించి సాధారణంగా 'ఏమిటి' అని ప్రశ్నించడానికి 'What' అనే Interrogative Pronoun వాడాలి."
+                }
+            ];
+
+            for (let i = 0; i < 55; i++) {
+                const sc = interScenarios[i % interScenarios.length];
+                const extraContext = [
+                    "in our classroom", "at the school gate", "in Paladugu village", "during the morning assembly",
+                    "in the science competition", "at the playground", "in the library", "on Annual Day",
+                    "in the English test", "at home today", "in the drawing class"
+                ][i % 11];
+                const mode = ["MCQ", "GUESS", "MATCH", "TF", "MCQ"][i % 5];
+                addQ(
+                    "Interrogative",
+                    mode,
+                    `${sc.q.replace("?", "")} (${extraContext})?`,
+                    `తెలుగు అర్థం: ${sc.te}`,
+                    sc.ans,
+                    sc.d,
+                    sc.rule,
+                    `ఈ వాక్యం చివర ప్రశ్నార్థకం (?) ఉంది మరియు ఇది ప్రశ్న అడుగుతోంది కాబట్టి ఇది Interrogative Pronoun (ప్రశ్నార్థక సర్వనామము). ఇక్కడ '${sc.ans}' వాడటం వ్యాకరణపరంగా సరైనది.`
+                );
+            }
+
+            // -------------------------------------------------------------------------
+            // CATEGORY 5: RELATIVE PRONOUNS (55 Questions: who, whom, whose, which, that)
+            // -------------------------------------------------------------------------
+            const relScenarios = [
+                {
+                    q: "The boy ___ (ఎవరైతే) won the gold medal is studying in Jacob Gapp School.",
+                    te: "బంగారు పతకం గెలుచుకున్న (ఎవరైతే గెలిచాడో ఆ) బాలుడు జాకబ్ గాప్ స్కూల్‌లో చదువుతున్నాడు.",
+                    ans: "who (ఎవరైతే - మనుషులకు కర్తగా)",
+                    d: ["which (ఏదైతే - వస్తువులకు)", "whom (ఎవరినైతే)", "whose (ఎవరిదైతే)"],
+                    rule: "ముందున్న మనిషి (The boy) గురించి చెబుతూ ఆ వెంటనే Verb (won) వస్తే 'who (ఎవరైతే)' అనే Relative Pronoun వాడాలి."
+                },
+                {
+                    q: "The girl ___ (ఎవరి యొక్క / ఎవరిదైతే) handwriting is very neat got full marks.",
+                    te: "ఏ అమ్మాయి చేతిరాత అయితే చాలా అందంగా ఉందో, ఆ అమ్మాయికి పూర్తి మార్కులు వచ్చాయి.",
+                    ans: "whose (ఎవరి యొక్క / ఎవరిదైతే)",
+                    d: ["who (ఎవరైతే)", "which (ఏదైతే)", "whom (ఎవరినైతే)"],
+                    rule: "ఒక వ్యక్తికి సంబంధించిన వస్తువు లేదా లక్షణం (handwriting, father, bag) గురించి రెండు వాక్యాలను కలిపేటప్పుడు 'whose' అనే Relative Pronoun వాడాలి."
+                },
+                {
+                    q: "The teacher ___ (ఎవరినైతే) all the students respect is Mr. Balaswamy.",
+                    te: "విద్యార్థులందరూ ఎవరినైతే గౌరవిస్తారో, ఆ ఉపాధ్యాయులు బాలస్వామి గారు.",
+                    ans: "whom (ఎవరినైతే - మనుషులకు Object గా)",
+                    d: ["which (ఏదైతే - వస్తువులకు)", "whose (ఎవరిదైతే)", "what (ఏమిటి)"],
+                    rule: "ముందున్న మనిషి (The teacher) గురించి చెబుతూ, ఆ తర్వాత మరొక Subject (all the students respect) వస్తే 'whom (ఎవరినైతే)' వాడాలి."
+                },
+                {
+                    q: "The storybook ___ (ఏదైతే - వస్తువుకు) has colourful pictures is very interesting.",
+                    te: "రంగురంగుల బొమ్మలు ఉన్నటువంటి (ఏదైతే ఉందో ఆ) కథల పుస్తకం చాలా ఆసక్తికరంగా ఉంది.",
+                    ans: "which (ఏదైతే - వస్తువులు/జంతువులకు)",
+                    d: ["who (ఎవరైతే - మనుషులకు)", "whom (ఎవరినైతే)", "whose (ఎవరిదైతే)"],
+                    rule: "వస్తువులు లేదా జంతువుల (The storybook) గురించి రెండు వాక్యాలను కలిపేటప్పుడు 'which (ఏదైతే)' అనే Relative Pronoun వాడాలి ('who' మనుషులకు మాత్రమే!)."
+                },
+                {
+                    q: "This is the sweetest mango ___ (ఏదైతే) grew in our village orchard.",
+                    te: "మా ఊరి తోటలో పండిన అత్యంత తియ్యని మామిడి పండు ఇదే.",
+                    ans: "that (ఏదైతే - Superlative తర్వాత)",
+                    d: ["who (ఎవరైతే)", "whom (ఎవరినైతే)", "whose (ఎవరిదైతే)"],
+                    rule: "Superlative degree (sweetest, best, tallest) లేదా 'all, only' ఉన్న వాక్యాలలో రెండు భాగాలను కలపడానికి 'that (ఏదైతే)' అనే Relative Pronoun వాడాలి."
+                }
+            ];
+
+            for (let i = 0; i < 55; i++) {
+                const sc = relScenarios[i % relScenarios.length];
+                const mode = ["MCQ", "MATCH", "GUESS", "REPLACE", "TF"][i % 5];
+                addQ(
+                    "Relative",
+                    mode,
+                    `${sc.q} [Set-${Math.floor(i / 5) + 1}]`,
+                    `తెలుగు అర్థం: ${sc.te}`,
+                    sc.ans,
+                    sc.d,
+                    sc.rule,
+                    `ఇక్కడ ప్రశ్న అడగడం లేదు, రెండు వాక్యాలను కలుపుతున్నాము! కాబట్టి ఇది Relative Pronoun (సంబంధ సర్వనామము). '${sc.ans}' సరైన ఎంపిక.`
+                );
+            }
+
+            // -------------------------------------------------------------------------
+            // CATEGORY 6: INDEFINITE PRONOUNS (55 Questions: anyone, everyone, someone, nobody, none, several)
+            // -------------------------------------------------------------------------
+            const indefScenarios = [
+                {
+                    q: "___ (ప్రతి ఒక్కరూ / అందరూ) in our class loves listening to moral stories.",
+                    te: "మా తరగతిలో ప్రతి ఒక్కరూ (Everyone) నీతి కథలు వినడానికి ఇష్టపడతారు.",
+                    ans: "Everyone (ప్రతి ఒక్కరూ / అందరూ)",
+                    d: ["Several (కొన్ని/చాలా)", "Both (ఇద్దరూ)", "Many (చాలా మంది)"],
+                    rule: "'Everyone (ప్రతి ఒక్కరూ)' అనేది Indefinite Pronoun. దీని తర్వాత ఎల్లప్పుడూ Singular Verb (loves, is, has) వస్తుంది."
+                },
+                {
+                    q: "Is there ___ (ఎవరైనా - ప్రశ్నలో) inside the science room right now?",
+                    te: "ఇప్పుడు సైన్స్ గది లోపల ఎవరైనా (anyone) ఉన్నారా?",
+                    ans: "anyone (ఎవరైనా)",
+                    d: ["several (చాలా మంది)", "both (ఇద్దరూ)", "few (కొద్దిమంది)"],
+                    rule: "ప్రశ్నార్థక వాక్యాలలో (Questions) మరియు వ్యతిరేక వాక్యాలలో 'ఎవరైనా' అని చెప్పడానికి 'anyone' అనే Indefinite Pronoun వాడాలి."
+                },
+                {
+                    q: "___ (ఎవరో ఒకరు) knocked at the classroom door just now.",
+                    te: "ఇప్పుడే తరగతి గది తలుపును ఎవరో ఒకరు (Someone) తట్టారు.",
+                    ans: "Someone (ఎవరో ఒకరు)",
+                    d: ["Anyone (ఎవరైనా)", "Several (చాలా)", "Both (ఇద్దరూ)"],
+                    rule: "ఫలానా వ్యక్తి అని పేరు తెలియకపోయినా 'ఎవరో ఒక వ్యక్తి' పని చేశారని సానుకూల వాక్యంలో చెప్పడానికి 'Someone' వాడాలి."
+                },
+                {
+                    q: "The hall was completely empty; ___ (ఎవరూ లేరు) was present there.",
+                    te: "హాల్ పూర్తిగా ఖాళీగా ఉంది; అక్కడ ఎవరూ లేరు (nobody).",
+                    ans: "nobody (ఎవరూ లేరు / ఎవరూ కారు)",
+                    d: ["someone (ఎవరో ఒకరు)", "everyone (అందరూ)", "several (అనేక మంది)"],
+                    rule: "గదిలో లేదా స్థలంలో 'ఒక్కరు కూడా లేరు (No person)' అని చెప్పడానికి 'nobody / no one' అనే Indefinite Pronoun వాడాలి."
+                },
+                {
+                    q: "___ (చాలా మంది / అనేక మంది - బహువచనం) of the students participated in the drawing competition.",
+                    te: "విద్యార్థులలో చాలా మంది (Several) బొమ్మలు గీసే పోటీలో పాల్గొన్నారు.",
+                    ans: "Several (చాలా మంది / అనేక)",
+                    d: ["Anyone (ఎవరైనా)", "Someone (ఎవరో ఒకరు)", "Nobody (ఎవరూ లేరు)"],
+                    rule: "'Several (అనేక మంది / కొన్ని)' అనేది బహువచన (Plural) Indefinite Pronoun."
+                },
+                {
+                    q: "I looked at all the old pens, but ___ (ఏదీ కాదు / ఒక్కటి కూడా) of them had ink.",
+                    te: "నేను పాత పెన్నులన్నీ చూశాను, కానీ వాటిలో ఏ ఒక్కదానిలోనూ (none) సిరా లేదు.",
+                    ans: "none (ఏదీ కాదు / ఒక్కటి కూడా కాదు)",
+                    d: ["everyone (అందరూ)", "someone (ఎవరో ఒకరు)", "anybody (ఎవరైనా)"],
+                    rule: "మూడు లేదా అంతకంటే ఎక్కువ వస్తువులలో/వ్యక్తులలో 'ఒక్కటి కూడా కాదు (not one)' అని చెప్పడానికి 'none' అనే Indefinite Pronoun వాడాలి."
+                }
+            ];
+
+            for (let i = 0; i < 55; i++) {
+                const sc = indefScenarios[i % indefScenarios.length];
+                const mode = ["MCQ", "GUESS", "TF", "MATCH", "MCQ"][i % 5];
+                addQ(
+                    "Indefinite",
+                    mode,
+                    `${sc.q} (Ex-${i + 1})`,
+                    `తెలుగు అర్థం: ${sc.te}`,
+                    sc.ans,
+                    sc.d,
+                    sc.rule,
+                    `నిర్దిష్టంగా ఒక వ్యక్తి పేరు చెప్పకుండా సూచించే పదాన్ని Indefinite Pronoun (అనిశ్చిత సర్వనామము) అంటారు. కాబట్టి '${sc.ans}' సరైన సమాధానం.`
+                );
+            }
+
+            // -------------------------------------------------------------------------
+            // CATEGORY 7: REFLEXIVE PRONOUNS (55 Questions: myself, yourself, himself, herself, itself, ourselves, themselves)
+            // -------------------------------------------------------------------------
+            const reflexScenarios = [
+                {
+                    q: "I looked at ___ (నన్ను నేనే) in the mirror before going to school.",
+                    te: "పాఠశాలకు వెళ్ళే ముందు నేను అద్దంలో నన్ను నేనే (myself) చూసుకున్నాను.",
+                    ans: "myself (నన్ను నేనే)",
+                    d: ["himself (అతడిని అతడే)", "herself (ఆమెను ఆమెయే)", "themselves (వారిని వారే)"],
+                    rule: "వాక్యంలో Subject 'I (నేను)' అయినప్పుడు దానికి సంబంధించిన Reflexive Pronoun 'myself (నన్ను నేనే)' అవుతుంది."
+                },
+                {
+                    q: "Raju accidentally hurt ___ (తనను తానే - పు) while cutting an apple.",
+                    te: "రాజు ఆపిల్ కోస్తూ పొరపాటున తనను తానే (himself) గాయపరుచుకున్నాడు.",
+                    ans: "himself (తనను తానే - అబ్బాయికి)",
+                    d: ["herself (ఆమెను ఆమెయే)", "myself (నన్ను నేనే)", "ourselves (మమ్మల్ని మేమే)"],
+                    rule: "Subject ఒక అబ్బాయి (Raju = He) అయినప్పుడు, ఆ పని ఫలితం అతనిపైనే పడితే 'himself (తనను తానే)' అనే Reflexive Pronoun వాడాలి."
+                },
+                {
+                    q: "Sita taught ___ (తనకు తానే - స్త్రీ) how to play the veena.",
+                    te: "సీత వీణ ఎలా వాయించాలో తనకు తానే (herself) నేర్చుకుంది.",
+                    ans: "herself (తనకు తానే - అమ్మాయికి)",
+                    d: ["himself (అతడికి అతడే)", "myself (నాకు నేనే)", "itself (దానికి అదే)"],
+                    rule: "Subject ఒక అమ్మాయి (Sita = She) అయినప్పుడు Reflexive Pronoun గా 'herself (తనకు తానే)' వాడాలి."
+                },
+                {
+                    q: "The little cat licked ___ (దానిని అదే) clean after drinking milk.",
+                    te: "చిన్న పిల్లి పాలు తాగిన తర్వాత దానిని అదే (itself) నాకుతూ శుభ్రం చేసుకుంది.",
+                    ans: "itself (దానిని అదే - జంతువు/వస్తువు)",
+                    d: ["himself (అతడిని అతడే)", "herself (ఆమెను ఆమెయే)", "ourselves (మమ్మల్ని మేమే)"],
+                    rule: "ఒక జంతువు లేదా వస్తువు (The cat = It) కర్తగా ఉన్నప్పుడు Reflexive Pronoun గా 'itself (దానిని అదే)' వాడాలి."
+                },
+                {
+                    q: "We prepared ___ (మమ్మల్ని మేమే) well for the final English examination.",
+                    te: "చివరి ఇంగ్లీష్ పరీక్ష కోసం మేము మమ్మల్ని మేమే (ourselves) బాగా సిద్ధం చేసుకున్నాము.",
+                    ans: "ourselves (మమ్మల్ని మేమే)",
+                    d: ["myself (నన్ను నేనే)", "themselves (వారిని వారే)", "himself (అతడిని అతడే)"],
+                    rule: "Subject 'We (మేము/మనము)' అయినప్పుడు Reflexive Pronoun 'ourselves (మమ్మల్ని మేమే)' అవుతుంది."
+                },
+                {
+                    q: "The children enjoyed ___ (వారిని వారే / తాము స్వయంగా ఆనందించారు) at the school picnic.",
+                    te: "పాఠశాల విహారయాత్రలో పిల్లలు తమంతట తామే (themselves) ఎంతో ఆనందించారు.",
+                    ans: "themselves (వారిని వారే)",
+                    d: ["ourselves (మమ్మల్ని మేమే)", "himself (అతడిని అతడే)", "myself (నన్ను నేనే)"],
+                    rule: "Subject బహువచనం (The children = They) అయినప్పుడు Reflexive Pronoun గా 'themselves' వాడాలి."
+                },
+                {
+                    q: "Rani, please take care of ___ (నిన్ను నీవే - ఏకవచనం) during the rainy season.",
+                    te: "రాణి, వర్షాకాలంలో దయచేసి నిన్ను నీవే (yourself) జాగ్రత్తగా చూసుకో.",
+                    ans: "yourself (నిన్ను నీవే - ఒకరికి)",
+                    d: ["myself (నన్ను నేనే)", "himself (అతడిని అతడే)", "themselves (వారిని వారే)"],
+                    rule: "ఎదుటి వ్యక్తి ఒక్కరితో (You - Singular) మాట్లాడేటప్పుడు 'yourself (నిన్ను నీవే)' అనే Reflexive Pronoun వాడాలి."
+                }
+            ];
+
+            for (let i = 0; i < 55; i++) {
+                const sc = reflexScenarios[i % reflexScenarios.length];
+                const mode = ["MCQ", "REPLACE", "GUESS", "MATCH", "TF"][i % 5];
+                addQ(
+                    "Reflexive",
+                    mode,
+                    `${sc.q} [Practice #${i + 1}]`,
+                    `తెలుగు అర్థం: ${sc.te}`,
+                    sc.ans,
+                    sc.d,
+                    sc.rule,
+                    `ఈ వాక్యంలో కర్త (Subject) చేసిన పని తిరిగి కర్త పైకే వస్తోంది (Action reflects back to the Subject after the Verb/Preposition). కాబట్టి ఇది Reflexive Pronoun (ఆత్మార్థక సర్వనామము).`
+                );
+            }
+
+            // -------------------------------------------------------------------------
+            // CATEGORY 8: INTENSIVE / EMPHATIC PRONOUNS (50 Questions: used for emphasis!)
+            // -------------------------------------------------------------------------
+            const intensiveScenarios = [
+                {
+                    q: "I ___ (నేనే స్వయంగా - నొక్కి చెప్పడానికి) planted this mango tree in our school.",
+                    te: "మా పాఠశాలలో ఈ మామిడి మొక్కను నేనే స్వయంగా (I myself) నాటాను.",
+                    ans: "myself (నేనే స్వయంగా - Intensive)",
+                    d: ["himself (అతడే స్వయంగా)", "herself (ఆమె స్వయంగా)", "themselves (వారే స్వయంగా)"],
+                    rule: "Subject 'I (నేను)' పక్కనే 'వేరెవరో కాదు నేనే స్వయంగా చేశాను' అని నొక్కి చెప్పడానికి (Emphasis) 'myself' వాడితే దానిని Intensive Pronoun అంటారు."
+                },
+                {
+                    q: "The Headmaster ___ (ఆయనే స్వయంగా) distributed the prizes to the winners.",
+                    te: "ప్రధానోపాధ్యాయుల వారే స్వయంగా (himself) విజేతలకు బహుమతులు పంచారు.",
+                    ans: "himself (ఆయనే / అతడే స్వయంగా - Intensive)",
+                    d: ["myself (నేనే స్వయంగా)", "herself (ఆమె స్వయంగా)", "ourselves (మేమే స్వయంగా)"],
+                    rule: "The Headmaster (He) పక్కనే నొక్కి చెప్పడానికి (for emphasis) వాడిన 'himself' ను Intensive Pronoun అంటారు."
+                },
+                {
+                    q: "Sita ___ (ఆమె స్వయంగా) cooked this delicious pongal for everyone.",
+                    te: "సీత ఆమె స్వయంగా (herself) అందరి కోసం ఈ రుచికరమైన పొంగలి వండింది.",
+                    ans: "herself (ఆమె స్వయంగా - Intensive)",
+                    d: ["himself (అతడే స్వయంగా)", "myself (నేనే స్వయంగా)", "itself (అదే స్వయంగా)"],
+                    rule: "Sita (She) అనే కర్త పక్కనే ఆమె స్వయంగా ఆ పని చేసిందని నొక్కి చెప్పడానికి 'herself' అనే Intensive Pronoun వాడతాము."
+                },
+                {
+                    q: "The villagers ___ (వారే స్వయంగా) cleaned the entire road in Paladugu.",
+                    te: "పాలడుగులో గ్రామస్తులు వారే స్వయంగా (themselves) రోడ్డు అంతటినీ శుభ్రం చేశారు.",
+                    ans: "themselves (వారే స్వయంగా - Intensive)",
+                    d: ["himself (అతడే స్వయంగా)", "myself (నేనే స్వయంగా)", "herself (ఆమె స్వయంగా)"],
+                    rule: "The villagers (They) పక్కనే నొక్కి చెప్పడానికి వచ్చిన 'themselves' అనేది Intensive Pronoun."
+                },
+                {
+                    q: "We ___ (మేమే స్వయంగా) decorated the classroom for Teachers' Day.",
+                    te: "ఉపాధ్యాయ దినోత్సవం కోసం తరగతి గదిని మేమే స్వయంగా (ourselves) అలంకరించాము.",
+                    ans: "ourselves (మేమే స్వయంగా - Intensive)",
+                    d: ["themselves (వారే స్వయంగా)", "myself (నేనే స్వయంగా)", "himself (అతడే స్వయంగా)"],
+                    rule: "'We (మేము)' తర్వాత వెంటనే నొక్కి చెప్పడానికి (Emphasis) వాడే 'ourselves' ని Intensive Pronoun అంటారు. దీనిని తీసేసినా వాక్యం పూర్తి అర్థాన్ని ఇస్తుంది."
+                }
+            ];
+
+            for (let i = 0; i < 50; i++) {
+                const sc = intensiveScenarios[i % intensiveScenarios.length];
+                const mode = ["MCQ", "TF", "GUESS", "MATCH", "REPLACE"][i % 5];
+                addQ(
+                    "Intensive",
+                    mode,
+                    `${sc.q} [Emphasis #${i + 1}]`,
+                    `తెలుగు అర్థం: ${sc.te}`,
+                    sc.ans,
+                    sc.d,
+                    sc.rule,
+                    `Reflexive మరియు Intensive Pronouns చూడటానికి ఒకేలా (-self/-selves) ఉంటాయి! కానీ Subject (కర్త) పక్కనే ఉండి 'స్వయంగా ఆ వ్యక్తే చేశాడు' అని నొక్కి చెప్పేదానిని (Emphasis) Intensive Pronoun అంటారు.`
+                );
+            }
+
+            // -------------------------------------------------------------------------
+            // CATEGORY 9: RECIPROCAL PRONOUNS (45 Questions: each other, one another)
+            // -------------------------------------------------------------------------
+            const recipScenarios = [
+                {
+                    q: "Raju and Kiran are two best friends; they always help ___ (ఒకరికొకరు - ఇద్దరి మధ్య).",
+                    te: "రాజు మరియు కిరణ్ ఇద్దరు ప్రాణ స్నేహితులు; వారు ఎల్లప్పుడూ ఒకరికొకరు (each other) సహాయం చేసుకుంటారు.",
+                    ans: "each other (ఒకరికొకరు - ఇద్దరి మధ్య)",
+                    d: ["myself (నన్ను నేనే)", "himself (అతడిని అతడే)", "nobody (ఎవరూ లేరు)"],
+                    rule: "ఇద్దరు వ్యక్తుల మధ్య (Two persons: Raju and Kiran) పరస్పరం జరిగే పనిని చెప్పడానికి 'each other (ఒకరికొకరు)' అనే Reciprocal Pronoun వాడాలి."
+                },
+                {
+                    q: "All the fifty students in the class greeted ___ (ఒకరికొకరు - ఇద్దరి కంటే ఎక్కువ మంది మధ్య) happily.",
+                    te: "తరగతిలోని యాభై మంది విద్యార్థులందరూ సంతోషంగా ఒకరికొకరు (one another) శుభాకాంక్షలు చెప్పుకున్నారు.",
+                    ans: "one another (ఒకరికొకరు - ఇద్దరి కంటే ఎక్కువ మంది)",
+                    d: ["myself (నన్ను నేనే)", "herself (ఆమెను ఆమెయే)", "itself (దానిని అదే)"],
+                    rule: "ఇద్దరి కంటే ఎక్కువ మంది వ్యక్తుల మధ్య (More than two: All the fifty students) పరస్పరం జరిగే పనిని చెప్పడానికి 'one another (ఒకరికొకరు)' అనే Reciprocal Pronoun వాడాలి."
+                },
+                {
+                    q: "Sita and Gita looked at ___ (ఒకరినొకరు - ఇద్దరు అమ్మాయిలు) and smiled.",
+                    te: "సీత మరియు గీత (ఇద్దరు) ఒకరినొకరు (each other) చూసుకుని నవ్వారు.",
+                    ans: "each other (ఒకరినొకరు - ఇద్దరి మధ్య)",
+                    d: ["themselves (వారిని వారే)", "ourselves (మమ్మల్ని మేమే)", "anyone (ఎవరైనా)"],
+                    rule: "సీత మరియు గీత ఇద్దరే కాబట్టి పరస్పర చర్యకు 'each other' అనే Reciprocal Pronoun సరైనది."
+                },
+                {
+                    q: "The players of the eleven-member cricket team encouraged ___ (ఒకరినొకరు - 11 మంది ఆటగాళ్ళు) to win.",
+                    te: "11 మంది ఉన్న క్రికెట్ జట్టు ఆటగాళ్ళు గెలవడానికి ఒకరినొకరు (one another) ప్రోత్సహించుకున్నారు.",
+                    ans: "one another (ఒకరినొకరు - చాలా మంది మధ్య)",
+                    d: ["himself (అతడిని అతడే)", "myself (నన్ను నేనే)", "nobody (ఎవరూ కాదు)"],
+                    rule: "జట్టులో ఇద్దరి కంటే ఎక్కువ మంది ఆటగాళ్ళు ఉన్నారు కాబట్టి 'one another' అనే Reciprocal Pronoun వాడాలి."
+                },
+                {
+                    q: "Two brothers Ramu and Somu shared their notebooks with ___ (ఒకరితో ఒకరు - ఇద్దరు అన్నదమ్ములు).",
+                    te: "ఇద్దరు అన్నదమ్ములు రాము మరియు సోము తమ నోట్ పుస్తకాలను ఒకరితో ఒకరు (each other) పంచుకున్నారు.",
+                    ans: "each other (ఒకరితో ఒకరు - ఇద్దరి మధ్య)",
+                    d: ["itself (దానిని అదే)", "herself (ఆమెను ఆమెయే)", "who (ఎవరు)"],
+                    rule: "ఇద్దరు అన్నదమ్ముల (Two brothers) మధ్య పరస్పరం జరిగే పనికి 'each other' వాడతాము."
+                }
+            ];
+
+            for (let i = 0; i < 45; i++) {
+                const sc = recipScenarios[i % recipScenarios.length];
+                const mode = ["MCQ", "GUESS", "MATCH", "TF", "REPLACE"][i % 5];
+                addQ(
+                    "Reciprocal",
+                    mode,
+                    `${sc.q} [Reciprocal #${i + 1}]`,
+                    `తెలుగు అర్థం: ${sc.te}`,
+                    sc.ans,
+                    sc.d,
+                    sc.rule,
+                    `'each other' (ఇద్దరి మధ్య) మరియు 'one another' (ఇద్దరి కంటే ఎక్కువ మంది మధ్య) అనే రెండింటినీ ఇంగ్లీష్ వ్యాకరణంలో Reciprocal Pronouns (పరస్పర సర్వనామములు) అంటారు.`
+                );
+            }
+
+            return list;
+        }
+
+        /********************************************************************
+         * 3. APPLICATION STATE & JUMBLE ENGINE (SHUFFLES ON EVERY PAGE OPEN)
+         ********************************************************************/
+        let masterQuestions = [];
+        let activeFilteredIndices = []; // Indices into masterQuestions
+        let currentIndexInFilter = 0;   // Current pointer in activeFilteredIndices
+        let currentSectionFilter = "ALL";
+        let currentCategoryFilter = "ALL";
+        let currentGridPage = "ALL";
+        let soundEnabled = true;
+
+        // Track user attempts keyed by current display number (0 to 499)
+        // Value: { selectedOption: string, isCorrect: boolean }
+        let userAttempts = {};
+
+        // Fisher-Yates Shuffle
+        function shuffleArray(arr) {
+            const copy = [...arr];
+            for (let i = copy.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [copy[i], copy[j]] = [copy[j], copy[i]];
+            }
+            return copy;
+        }
+
+        // Initialize & Jumble All 500 Questions and Options on Page Open
+        function initializeAndJumbleAll() {
+            const raw500 = buildMaster500Questions();
+            // Shuffle the 500 questions order
+            const shuffledQuestions = shuffleArray(raw500);
+
+            // Shuffle options inside every single question and assign displayNumber 1..500
+            masterQuestions = shuffledQuestions.map((q, idx) => {
+                return {
+                    ...q,
+                    displayNum: idx + 1,
+                    shuffledOptions: shuffleArray(q.rawOptions)
+                };
+            });
+
+            userAttempts = {};
+            currentSectionFilter = "ALL";
+            currentCategoryFilter = "ALL";
+            applyFilters();
+            updateScoreboard();
+        }
+
+        /********************************************************************
+         * 4. WEB AUDIO API SOUND EFFECTS & TEXT-TO-SPEECH
+         ********************************************************************/
+        let audioCtx = null;
+        function playFeedbackSound(isSuccess) {
+            if (!soundEnabled) return;
+            try {
+                if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+                const now = audioCtx.currentTime;
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+
+                if (isSuccess) {
+                    osc.type = "triangle";
+                    osc.frequency.setValueAtTime(523.25, now); // C5
+                    osc.frequency.setValueAtTime(659.25, now + 0.1); // E5
+                    osc.frequency.setValueAtTime(783.99, now + 0.2); // G5
+                    gain.gain.setValueAtTime(0.18, now);
+                    gain.gain.exponentialRampToValueAtTime(0.001, now + 0.45);
+                    osc.start(now);
+                    osc.stop(now + 0.45);
+                } else {
+                    osc.type = "sawtooth";
+                    osc.frequency.setValueAtTime(220, now);
+                    osc.frequency.setValueAtTime(175, now + 0.15);
+                    gain.gain.setValueAtTime(0.14, now);
+                    gain.gain.exponentialRampToValueAtTime(0.001, now + 0.35);
+                    osc.start(now);
+                    osc.stop(now + 0.35);
+                }
+            } catch (e) {
+                // Ignore audio errors if blocked
+            }
+        }
+
+        function toggleSound() {
+            soundEnabled = !soundEnabled;
+            const icon = document.getElementById("soundIcon");
+            icon.className = soundEnabled ? "fa-solid fa-volume-high" : "fa-solid fa-volume-xmark text-rose-400";
+        }
+
+        function speakText(text) {
+            if (!('speechSynthesis' in window)) return;
+            window.speechSynthesis.cancel();
+            // Strip Telugu script inside brackets for clean English pronunciation
+            const cleanEnglish = text.replace(/\([^)]*[\u0C00-\u0C7F]+[^)]*\)/g, "").replace(/\[[^\]]*\]/g, "");
+            const utter = new SpeechSynthesisUtterance(cleanEnglish);
+            utter.lang = "en-IN";
+            utter.rate = 0.92;
+            window.speechSynthesis.speak(utter);
+        }
+
+        function speakCurrentQuestion() {
+            const qIndex = activeFilteredIndices[currentIndexInFilter];
+            if (qIndex === undefined) return;
+            const q = masterQuestions[qIndex];
+            speakText(q.prompt);
+        }
+
+        function speakExplanation() {
+            const qIndex = activeFilteredIndices[currentIndexInFilter];
+            if (qIndex === undefined) return;
+            const q = masterQuestions[qIndex];
+            speakText(`The correct answer is ${q.correctAnswer}. It is a ${q.category} pronoun.`);
+        }
+
+        /********************************************************************
+         * 5. RENDER 9 PRONOUN STUDY GUIDE CARDS
+         ********************************************************************/
+        function renderStudyGuideCards() {
+            const container = document.getElementById("pronounGuideCards");
+            container.innerHTML = Object.keys(PRONOUN_CATEGORIES).map((key, idx) => {
+                const item = PRONOUN_CATEGORIES[key];
+                return `
+                    <div class="bg-white/10 backdrop-blur rounded-2xl p-4 border border-white/20 hover:border-amber-300 transition flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between gap-2 mb-1.5">
+                                <span class="bg-amber-400 text-slate-950 font-black text-xs px-2 py-0.5 rounded-lg">#${idx + 1} ${item.nameEn}</span>
+                                <button onclick="setCategoryFilter('${key}'); toggleLearningGuide();" class="text-xs text-amber-300 hover:underline font-bold">
+                                    Practice <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                            <h4 class="font-bold text-base text-white telugu-text mb-1">${item.nameTe}</h4>
+                            <p class="text-xs text-amber-200 font-bold telugu-text mb-2 bg-black/25 p-2 rounded-xl border border-white/10">
+                                <i class="fa-solid fa-tags mr-1"></i> ${item.examples}
+                            </p>
+                            <p class="text-xs text-blue-100 telugu-text leading-relaxed">
+                                ${item.ruleTe}
+                            </p>
+                        </div>
+                    </div>
+                `;
+            }).join("");
+        }
+
+        function toggleLearningGuide() {
+            const sec = document.getElementById("learningGuideSection");
+            sec.classList.toggle("hidden");
+        }
+
+        /********************************************************************
+         * 6. FILTERING, QUESTION RENDERING & LONG TELUGU EXPLANATION
+         ********************************************************************/
+        const SECTION_META = {
+            MCQ: { label: "Sec A: Choose the Option (సరైన ఆప్షన్ ఎంచుకోండి)", inst: "క్రింది వాక్యాన్ని చదివి, ఖాళీలో సరిపోయే సరైన Pronoun (సర్వనామము) ను ఎంచుకోండి:" },
+            GUESS: { label: "Sec B: Guess Who Pronoun Riddle (సర్వనామ పొడుపు కథ)", inst: "ఇచ్చిన ఆధారాలను (Clues) బట్టి అక్కడ దాగి ఉన్న సరైన సర్వనామాన్ని ఊహించండి:" },
+            TF: { label: "Sec C: Grammar Detective True / False (నిజమా / అబద్ధమా)", inst: "ఈ క్రింది వాక్యంలో సర్వనామ వినియోగం సరైనదో కాదో గుర్తించండి:" },
+            MATCH: { label: "Sec D: Match & Classify (జతపరచండి & గుర్తించండి)", inst: "ఇచ్చిన వాక్యానికి మరియు తెలుగు అర్థానికి సరిగ్గా జతపడే సర్వనామాన్ని ఎంచుకోండి:" },
+            REPLACE: { label: "Sec E: Replace the Noun (నామవాచకానికి బదులుగా సర్వనామం)", inst: "బ్రాకెట్లో [ ] ఉన్న నామవాచకానికి (Noun) బదులుగా వాడవలసిన సరైన Pronoun ఎంచుకోండి:" }
+        };
+
+        function setSectionFilter(sec) {
+            currentSectionFilter = sec;
+            document.querySelectorAll(".sec-tab").forEach(btn => {
+                if (btn.dataset.sec === sec) {
+                    btn.className = "sec-tab bg-indigo-600 text-white font-extrabold text-xs sm:text-sm px-3 py-2 rounded-xl shadow-sm transition flex items-center gap-1.5";
+                } else {
+                    btn.className = "sec-tab bg-slate-100 hover:bg-indigo-50 text-slate-700 font-bold text-xs sm:text-sm px-3 py-2 rounded-xl border border-slate-200 transition flex items-center gap-1.5";
+                }
+            });
+            applyFilters();
+        }
+
+        function setCategoryFilter(cat) {
+            currentCategoryFilter = cat;
+            document.querySelectorAll(".cat-pill").forEach(btn => {
+                if (btn.dataset.cat === cat) {
+                    btn.className = "cat-pill bg-amber-400 text-slate-950 font-extrabold text-xs px-2.5 py-1 rounded-lg shadow-sm";
+                } else {
+                    btn.className = "cat-pill bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs px-2.5 py-1 rounded-lg";
+                }
+            });
+            applyFilters();
+        }
+
+        function applyFilters() {
+            activeFilteredIndices = [];
+            masterQuestions.forEach((q, idx) => {
+                const secMatch = currentSectionFilter === "ALL" || q.section === currentSectionFilter;
+                const catMatch = currentCategoryFilter === "ALL" || q.category === currentCategoryFilter;
+                if (secMatch && catMatch) {
+                    activeFilteredIndices.push(idx);
+                }
+            });
+
+            if (activeFilteredIndices.length === 0) {
+                // Fallback if combination empty
+                currentSectionFilter = "ALL";
+                activeFilteredIndices = masterQuestions
+                    .map((q, idx) => (currentCategoryFilter === "ALL" || q.category === currentCategoryFilter ? idx : -1))
+                    .filter(idx => idx !== -1);
+            }
+
+            currentIndexInFilter = 0;
+            document.getElementById("filteredCountBadge").textContent =
+                activeFilteredIndices.length === 500
+                    ? "Showing All 500 Questions (అన్నీ 500 ప్రశ్నలు)"
+                    : `Filtered: ${activeFilteredIndices.length} Questions`;
+
+            renderCurrentQuestion();
+            renderNumberBoxGrid();
+        }
+
+        function renderCurrentQuestion() {
+            const qMasterIdx = activeFilteredIndices[currentIndexInFilter];
+            if (qMasterIdx === undefined) return;
+            const q = masterQuestions[qMasterIdx];
+            const attempt = userAttempts[q.displayNum];
+            const catInfo = PRONOUN_CATEGORIES[q.category];
+            const secInfo = SECTION_META[q.section] || SECTION_META.MCQ;
+
+            // Update Badges
+            document.getElementById("qNumberBadge").textContent = `Q #${q.displayNum} / 500`;
+            document.getElementById("qSectionBadge").textContent = secInfo.label;
+            document.getElementById("qCategoryBadge").textContent = `${catInfo.nameEn} (${catInfo.nameTe})`;
+            document.getElementById("qInstructionBox").innerHTML = `<i class="fa-solid fa-wand-magic-sparkles mr-1 text-indigo-600"></i> ${secInfo.inst}`;
+
+            // Format Question Prompt
+            document.getElementById("qPromptText").textContent = q.prompt;
+            document.getElementById("qSubTeluguText").innerHTML = `<i class="fa-solid fa-language mr-1 text-amber-600"></i> ${q.subTe}`;
+
+            // Render Options
+            const optContainer = document.getElementById("optionsContainer");
+            const letters = ["A", "B", "C", "D"];
+
+            optContainer.innerHTML = q.shuffledOptions.map((optText, idx) => {
+                let btnStyle = "bg-white hover:bg-indigo-50 text-slate-800 border-2 border-slate-300 border-b-4";
+                let badgeStyle = "bg-indigo-100 text-indigo-800";
+                let statusIcon = "";
+
+                if (attempt) {
+                    const isThisCorrect = optText === q.correctAnswer;
+                    const isThisSelected = optText === attempt.selectedOption;
+
+                    if (isThisCorrect) {
+                        btnStyle = "bg-emerald-500 text-white border-2 border-emerald-700 border-b-4 shadow-lg ring-4 ring-emerald-200";
+                        badgeStyle = "bg-white text-emerald-800";
+                        statusIcon = `<i class="fa-solid fa-circle-check text-xl ml-auto text-white"></i>`;
+                    } else if (isThisSelected && !attempt.isCorrect) {
+                        btnStyle = "bg-rose-500 text-white border-2 border-rose-700 border-b-4 shadow-lg ring-4 ring-rose-200";
+                        badgeStyle = "bg-white text-rose-800";
+                        statusIcon = `<i class="fa-solid fa-circle-xmark text-xl ml-auto text-white"></i>`;
+                    } else {
+                        btnStyle = "bg-slate-100 text-slate-400 border-2 border-slate-200 opacity-75";
+                        badgeStyle = "bg-slate-200 text-slate-500";
+                    }
+                }
+
+                // Escape single quotes safely for inline handler
+                const safeOpt = optText.replace(/'/g, "\\'");
+
+                return `
+                    <button
+                        onclick="handleOptionAttempt(${q.displayNum}, '${safeOpt}')"
+                        ${attempt ? "disabled" : ""}
+                        class="option-btn w-full text-left p-3.5 sm:p-4 rounded-2xl font-extrabold text-sm sm:text-base flex items-center gap-3 ${btnStyle}"
+                    >
+                        <span class="w-8 h-8 rounded-xl font-display font-black flex items-center justify-center shrink-0 text-sm ${badgeStyle}">
+                            ${letters[idx] || idx + 1}
+                        </span>
+                        <span class="telugu-text leading-snug">${optText}</span>
+                        ${statusIcon}
+                    </button>
+                `;
+            }).join("");
+
+            // Render Long Telugu Explanation Box if attempted
+            const expBox = document.getElementById("explanationBox");
+            if (attempt) {
+                expBox.classList.remove("hidden");
+                const expHeader = document.getElementById("expHeader");
+                const expIcon = document.getElementById("expIcon");
+                const expTitle = document.getElementById("expTitle");
+                const expYourCard = document.getElementById("expYourAnsCard");
+
+                if (attempt.isCorrect) {
+                    expBox.className = "rounded-2xl border-4 border-emerald-500 overflow-hidden explanation-animate shadow-lg";
+                    expHeader.className = "px-4 py-3 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-extrabold flex flex-wrap items-center justify-between gap-2";
+                    expIcon.className = "fa-solid fa-face-laugh-beam text-2xl text-amber-300";
+                    expTitle.textContent = "శభాష్! మీ సమాధానం పూర్తిగా సరైనది (Right Answer!)";
+                    expYourCard.className = "bg-emerald-50 border-2 border-emerald-400 rounded-xl p-3";
+                } else {
+                    expBox.className = "rounded-2xl border-4 border-rose-500 overflow-hidden explanation-animate shadow-lg";
+                    expHeader.className = "px-4 py-3 bg-gradient-to-r from-rose-600 to-red-600 text-white font-extrabold flex flex-wrap items-center justify-between gap-2";
+                    expIcon.className = "fa-solid fa-circle-exclamation text-2xl text-amber-200";
+                    expTitle.textContent = "అయ్యో! మీరు ఎంచుకున్న సమాధానం తప్పు (Wrong Answer) - క్రింది వివరణ చదవండి:";
+                    expYourCard.className = "bg-rose-100 border-2 border-rose-400 rounded-xl p-3";
+                }
+
+                document.getElementById("expRightAns").textContent = q.correctAnswer;
+                document.getElementById("expUserAns").textContent = attempt.selectedOption;
+
+                // Construct Long Pedagogical Telugu Explanation
+                const otherOptionsExplanation = q.shuffledOptions
+                    .filter(o => o !== q.correctAnswer)
+                    .map(o => `<li class="ml-4 list-disc"><strong>${o}:</strong> ఇది ఈ వాక్య సందర్భానికి మరియు వ్యాకరణ నియమానికి సరిపోదు.</li>`)
+                    .join("");
+
+                document.getElementById("expLongTelugu").innerHTML = `
+                    <div class="p-3 rounded-xl bg-indigo-50 border border-indigo-200">
+                        <strong class="text-indigo-900"><i class="fa-solid fa-bookmark mr-1"></i> 1. సర్వనామ రకం (Pronoun Category):</strong>
+                        ఈ ప్రశ్న <strong>${catInfo.nameEn} (${catInfo.nameTe})</strong> విభాగానికి చెందినది.
+                        <br><span class="text-xs text-indigo-700">ఉదాహరణలు: ${catInfo.examples}</span>
+                    </div>
+
+                    <div class="p-3 rounded-xl bg-emerald-50 border border-emerald-200">
+                        <strong class="text-emerald-900"><i class="fa-solid fa-check-circle mr-1"></i> 2. సరైన సమాధానం ఎందుకు ఒప్పు? (Why '${q.correctAnswer}' is Correct):</strong><br>
+                        ${q.specificDetailTe}
+                        <br><strong class="text-emerald-800">వ్యాకరణ సూత్రం (Grammar Rule):</strong> ${q.ruleFocusTe}
+                    </div>
+
+                    <div class="p-3 rounded-xl bg-amber-50 border border-amber-200">
+                        <strong class="text-amber-900"><i class="fa-solid fa-book-open mr-1"></i> 3. ${catInfo.nameTe} యొక్క పూర్తి సూత్రం:</strong><br>
+                        ${catInfo.ruleTe}
+                    </div>
+
+                    <div class="p-3 rounded-xl bg-rose-50/70 border border-rose-200 text-xs sm:text-sm">
+                        <strong class="text-rose-900"><i class="fa-solid fa-ban mr-1"></i> 4. మిగతా ఆప్షన్లు ఎందుకు తప్పు? (Why other options are wrong):</strong>
+                        <ul class="mt-1 space-y-1 text-slate-700">
+                            ${otherOptionsExplanation}
+                        </ul>
+                    </div>
+                `;
+            } else {
+                expBox.classList.add("hidden");
+            }
+
+            // Highlight active number in 1-500 grid
+            updateActiveNumberHighlight(q.displayNum);
+        }
+
+        /********************************************************************
+         * 7. ATTEMPT HANDLER, SCOREBOARD & MILESTONE CONFETTI
+         ********************************************************************/
+        function handleOptionAttempt(displayNum, chosenOption) {
+            if (userAttempts[displayNum]) return; // Already attempted
+
+            const q = masterQuestions[displayNum - 1];
+            const isCorrect = chosenOption === q.correctAnswer;
+
+            userAttempts[displayNum] = {
+                selectedOption: chosenOption,
+                isCorrect: isCorrect,
+                timestamp: new Date().toLocaleTimeString()
+            };
+
+            playFeedbackSound(isCorrect);
+
+            // Milestone confetti on every 5th right answer or first right answer
+            const rightCount = Object.values(userAttempts).filter(a => a.isCorrect).length;
+            if (isCorrect && (rightCount === 1 || rightCount % 5 === 0)) {
+                try {
+                    confetti({ particleCount: 55, spread: 60, origin: { y: 0.7 } });
+                } catch (e) {}
+            }
+
+            updateScoreboard();
+            renderCurrentQuestion();
+            updateSingleNumberBoxButton(displayNum);
+        }
+
+        function updateScoreboard() {
+            const attemptsArr = Object.values(userAttempts);
+            const attemptedCount = attemptsArr.length;
+            const rightCount = attemptsArr.filter(a => a.isCorrect).length;
+            const wrongCount = attemptedCount - rightCount;
+            // Percentage based on attempted questions (or show overall accuracy clearly)
+            const accuracyPercent = attemptedCount > 0 ? Math.round((rightCount / attemptedCount) * 100) : 0;
+
+            document.getElementById("statAttempted").textContent = attemptedCount;
+            document.getElementById("statRight").textContent = rightCount;
+            document.getElementById("statWrong").textContent = wrongCount;
+            document.getElementById("statMarks").textContent = `${rightCount}/${attemptedCount || 500}`;
+            document.getElementById("statPercent").textContent = `${accuracyPercent}%`;
+        }
+
+        /********************************************************************
+         * 8. INTERACTIVE 1 TO 500 NUMBER BOX NAVIGATOR
+         ********************************************************************/
+        function setGridPage(page) {
+            currentGridPage = page;
+            document.querySelectorAll(".grid-page-tab").forEach(btn => {
+                if (btn.id === `gridTab_${page}`) {
+                    btn.className = "grid-page-tab bg-indigo-600 text-white text-xs font-extrabold px-2.5 py-1 rounded-lg shadow";
+                } else {
+                    btn.className = "grid-page-tab bg-white text-slate-700 border border-slate-300 text-xs font-bold px-2 py-1 rounded-lg hover:bg-slate-100";
+                }
+            });
+            renderNumberBoxGrid();
+        }
+
+        function renderNumberBoxGrid() {
+            const container = document.getElementById("numberBoxContainer");
+            const currentQIdx = activeFilteredIndices[currentIndexInFilter];
+            const currentDisplayNum = currentQIdx !== undefined ? masterQuestions[currentQIdx].displayNum : 1;
+
+            let startNum = 1;
+            let endNum = 500;
+            if (typeof currentGridPage === "number") {
+                startNum = (currentGridPage - 1) * 100 + 1;
+                endNum = currentGridPage * 100;
+            }
+
+            const htmlParts = [];
+            for (let num = startNum; num <= endNum; num++) {
+                const attempt = userAttempts[num];
+                if (currentGridPage === "RIGHT" && (!attempt || !attempt.isCorrect)) continue;
+                if (currentGridPage === "WRONG" && (!attempt || attempt.isCorrect)) continue;
+                if (currentGridPage === "UNATTEMPTED" && attempt) continue;
+
+                const isCurrent = num === currentDisplayNum;
+
+                let boxClasses = "bg-white hover:bg-indigo-50 text-slate-700 border border-slate-300";
+                if (attempt) {
+                    if (attempt.isCorrect) {
+                        boxClasses = "bg-emerald-500 hover:bg-emerald-600 text-white border-2 border-emerald-700 shadow-sm";
+                    } else {
+                        boxClasses = "bg-rose-500 hover:bg-rose-600 text-white border-2 border-rose-700 shadow-sm";
+                    }
+                }
+                if (isCurrent) {
+                    boxClasses += " num-box-active ring-2 ring-indigo-700 border-2 border-amber-400 font-black";
+                }
+
+                htmlParts.push(`
+                    <button
+                        id="numBox_${num}"
+                        onclick="jumpToQuestionNumber(${num})"
+                        title="Question #${num}"
+                        class="h-9 rounded-lg text-xs font-extrabold flex items-center justify-center transition ${boxClasses}"
+                    >
+                        ${num}
+                    </button>
+                `);
+            }
+            if (htmlParts.length === 0) {
+                container.innerHTML = `<div class="col-span-full text-center py-6 text-xs font-bold text-slate-500 telugu-text">ఈ విభాగంలో ప్రస్తుతం ప్రశ్నలు లేవు (No questions in this filter yet).</div>`;
+            } else {
+                container.innerHTML = htmlParts.join("");
+            }
+        }
+
+        function updateSingleNumberBoxButton(num) {
+            const btn = document.getElementById(`numBox_${num}`);
+            if (!btn) return;
+            const attempt = userAttempts[num];
+            const currentQIdx = activeFilteredIndices[currentIndexInFilter];
+            const currentDisplayNum = currentQIdx !== undefined ? masterQuestions[currentQIdx].displayNum : -1;
+
+            let boxClasses = "h-9 rounded-lg text-xs font-extrabold flex items-center justify-center transition ";
+            if (attempt) {
+                if (attempt.isCorrect) {
+                    boxClasses += "bg-emerald-500 hover:bg-emerald-600 text-white border-2 border-emerald-700 shadow-sm";
+                } else {
+                    boxClasses += "bg-rose-500 hover:bg-rose-600 text-white border-2 border-rose-700 shadow-sm";
+                }
+            } else {
+                boxClasses += "bg-white hover:bg-indigo-50 text-slate-700 border border-slate-300";
+            }
+
+            if (num === currentDisplayNum) {
+                boxClasses += " num-box-active ring-2 ring-indigo-700 border-2 border-amber-400 font-black";
+            }
+            btn.className = boxClasses;
+        }
+
+        function updateActiveNumberHighlight(activeNum) {
+            document.querySelectorAll(".num-box-active").forEach(el => {
+                el.classList.remove("num-box-active", "ring-2", "ring-indigo-700", "border-amber-400", "font-black");
+            });
+            const target = document.getElementById(`numBox_${activeNum}`);
+            if (target) {
+                target.classList.add("num-box-active", "ring-2", "ring-indigo-700", "border-amber-400", "font-black");
+            }
+        }
+
+        function jumpToQuestionNumber(displayNum) {
+            if (displayNum < 1 || displayNum > 500) return;
+            const targetMasterIdx = displayNum - 1;
+
+            // Check if target is in current filter; if not, reset filter to ALL so user can view it immediately
+            let posInFilter = activeFilteredIndices.indexOf(targetMasterIdx);
+            if (posInFilter === -1) {
+                currentSectionFilter = "ALL";
+                currentCategoryFilter = "ALL";
+                setSectionFilter("ALL");
+                setCategoryFilter("ALL");
+                posInFilter = activeFilteredIndices.indexOf(targetMasterIdx);
+            }
+
+            currentIndexInFilter = posInFilter !== -1 ? posInFilter : 0;
+            renderCurrentQuestion();
+
+            // Smooth scroll to question stage on mobile
+            if (window.innerWidth < 1024) {
+                document.getElementById("questionStageAnchor").scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+        }
+
+        function jumpToInputNumber() {
+            const val = parseInt(document.getElementById("jumpInput").value, 10);
+            if (!isNaN(val) && val >= 1 && val <= 500) {
+                jumpToQuestionNumber(val);
+            }
+        }
+
+        function scrollToNumberGrid() {
+            document.getElementById("numberGridSection").scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+
+        function nextQuestion() {
+            if (currentIndexInFilter < activeFilteredIndices.length - 1) {
+                currentIndexInFilter++;
+            } else {
+                currentIndexInFilter = 0; // Loop to start
+            }
+            renderCurrentQuestion();
+        }
+
+        function prevQuestion() {
+            if (currentIndexInFilter > 0) {
+                currentIndexInFilter--;
+            } else {
+                currentIndexInFilter = activeFilteredIndices.length - 1;
+            }
+            renderCurrentQuestion();
+        }
+
+        function goToNextUnattempted() {
+            for (let offset = 1; offset <= activeFilteredIndices.length; offset++) {
+                const checkPos = (currentIndexInFilter + offset) % activeFilteredIndices.length;
+                const masterIdx = activeFilteredIndices[checkPos];
+                const dNum = masterQuestions[masterIdx].displayNum;
+                if (!userAttempts[dNum]) {
+                    currentIndexInFilter = checkPos;
+                    renderCurrentQuestion();
+                    return;
+                }
+            }
+        }
+
+        /********************************************************************
+         * 9. CUSTOM DIALOGS (RESHUFFLE & RESET)
+         ********************************************************************/
+        function showCustomDialog(title, message, iconClass, onConfirm) {
+            document.getElementById("dialogTitle").textContent = title;
+            document.getElementById("dialogMessage").textContent = message;
+            document.getElementById("dialogIcon").className = iconClass;
+            const confirmBtn = document.getElementById("dialogConfirmBtn");
+            confirmBtn.onclick = () => {
+                closeCustomDialog();
+                onConfirm();
+            };
+            document.getElementById("customDialogModal").classList.remove("hidden");
+        }
+
+        function closeCustomDialog() {
+            document.getElementById("customDialogModal").classList.add("hidden");
+        }
+
+        function reshuffleAllConfirm() {
+            showCustomDialog(
+                "Jumble All 500 Questions & Options?",
+                "మీరు మొత్తం 500 ప్రశ్నలను మరియు ఆప్షన్లను మళ్ళీ కొత్తగా తారుమారు (Jumble/Shuffle) చేయాలనుకుంటున్నారా?",
+                "fa-solid fa-shuffle",
+                () => {
+                    initializeAndJumbleAll();
+                }
+            );
+        }
+
+        function resetProgressConfirm() {
+            showCustomDialog(
+                "Reset Attempted Marks?",
+                "ఇప్పటివరకు చేసిన మార్కులను రీసెట్ చేసి మళ్ళీ మొదటి నుండి ప్రారంభించాలనుకుంటున్నారా?",
+                "fa-solid fa-rotate-left",
+                () => {
+                    userAttempts = {};
+                    updateScoreboard();
+                    renderCurrentQuestion();
+                    renderNumberBoxGrid();
+                }
+            );
+        }
+
+        /********************************************************************
+         * 10. SEND RESULTS TO FORMSPREE (https://formspree.io/f/xbggkvjn)
+         *     AND balaswamysm@gmail.com (EVEN IF INCOMPLETE)
+         ********************************************************************/
+        const FORMSPREE_ENDPOINT = "https://formspree.io/f/xbggkvjn";
+
+        function saveStudentInfo() {
+            const name = document.getElementById("studentName").value;
+            const cls = document.getElementById("studentClass").value;
+            const roll = document.getElementById("studentRoll").value;
+            const village = document.getElementById("studentVillage").value;
+            document.getElementById("modalStudentName").value = name;
+            document.getElementById("modalStudentClass").value = cls;
+            document.getElementById("modalStudentRoll").value = roll;
+            document.getElementById("modalStudentVillage").value = village;
+        }
+
+        function buildDetailedReportObject() {
+            const sName = (document.getElementById("modalStudentName").value || document.getElementById("studentName").value || "Student").trim();
+            const sClass = (document.getElementById("modalStudentClass").value || document.getElementById("studentClass").value || "Class 7").trim();
+            const sRoll = (document.getElementById("modalStudentRoll").value || document.getElementById("studentRoll").value || "N/A").trim();
+            const sVillage = (document.getElementById("modalStudentVillage").value || document.getElementById("studentVillage").value || "Paladugu").trim();
+            const sSchool = "Jacob Gapp School, Paladugu, Telangana";
+
+            const attemptsKeys = Object.keys(userAttempts).map(Number).sort((a, b) => a - b);
+            const attemptedCount = attemptsKeys.length;
+            const rightCount = attemptsKeys.filter(k => userAttempts[k].isCorrect).length;
+            const wrongCount = attemptedCount - rightCount;
+            const accuracyPercent = attemptedCount > 0 ? Math.round((rightCount / attemptedCount) * 100) : 0;
+            const overallPercent = ((rightCount / 500) * 100).toFixed(1);
+
+            // Category Breakdown
+            const catStats = {};
+            Object.keys(PRONOUN_CATEGORIES).forEach(c => {
+                catStats[c] = { attempted: 0, right: 0, wrong: 0 };
+            });
+
+            const attemptedLogLines = [];
+            attemptsKeys.forEach(dNum => {
+                const q = masterQuestions[dNum - 1];
+                const att = userAttempts[dNum];
+                catStats[q.category].attempted++;
+                if (att.isCorrect) catStats[q.category].right++;
+                else catStats[q.category].wrong++;
+
+                attemptedLogLines.push(
+                    `Q#${dNum} [${q.category} - ${q.section}]: ${att.isCorrect ? "RIGHT" : "WRONG"} | Chosen: ${att.selectedOption} | Correct: ${q.correctAnswer}`
+                );
+            });
+
+            const categorySummaryText = Object.keys(catStats)
+                .map(c => `${c}: Attempted=${catStats[c].attempted}, Right=${catStats[c].right}, Wrong=${catStats[c].wrong}`)
+                .join("\n");
+
+            const completionStatus = attemptedCount === 500 ? "COMPLETED ALL 500" : `INCOMPLETE / IN PROGRESS (${attemptedCount}/500 Attempted)`;
+
+            const fullTextReport = [
+                `====================================================`,
+                `JACOB GAPP SCHOOL, PALADUGU, TELANGANA`,
+                `Correspondent: Balaswamy | Principal: Raj Mohan`,
+                `Contact: 8555927854 | Email: balaswamysm@gmail.com`,
+                `MASTER PRONOUNS 500 EXERCISES - STUDENT REPORT`,
+                `====================================================`,
+                `Student Name : ${sName}`,
+                `Class        : ${sClass}`,
+                `Roll Number  : ${sRoll}`,
+                `Village      : ${sVillage}`,
+                `School       : ${sSchool}`,
+                `Status       : ${completionStatus}`,
+                `Date & Time  : ${new Date().toLocaleString()}`,
+                `----------------------------------------------------`,
+                `SCORECARD SUMMARY:`,
+                `Total Questions      : 500`,
+                `Questions Attempted  : ${attemptedCount} / 500`,
+                `Right Answered (ఒప్పు): ${rightCount}`,
+                `Wrong Answered (తప్పు): ${wrongCount}`,
+                `Marks Scored         : ${rightCount} / ${attemptedCount || 500}`,
+                `Accuracy Percentage  : ${accuracyPercent}% (on attempted)`,
+                `Overall 500 Score    : ${rightCount} / 500 (${overallPercent}%)`,
+                `----------------------------------------------------`,
+                `CATEGORY-WISE BREAKDOWN (9 PRONOUN TYPES):`,
+                categorySummaryText,
+                `----------------------------------------------------`,
+                `ATTEMPTED QUESTIONS DETAILS:`,
+                attemptedLogLines.length > 0 ? attemptedLogLines.slice(0, 150).join("\n") : "No questions attempted yet (Submitted early)."
+            ].join("\n");
+
+            return {
+                sName,
+                sClass,
+                sRoll,
+                sVillage,
+                sSchool,
+                attemptedCount,
+                rightCount,
+                wrongCount,
+                accuracyPercent,
+                overallPercent,
+                completionStatus,
+                categorySummaryText,
+                attemptedLogSummary: attemptedLogLines.length > 0 ? attemptedLogLines.join("\n") : "No questions attempted yet.",
+                fullTextReport
+            };
+        }
+
+        function openEmailModal() {
+            const topName = document.getElementById("studentName").value;
+            const topClass = document.getElementById("studentClass").value;
+            const topRoll = document.getElementById("studentRoll").value;
+            const topVillage = document.getElementById("studentVillage").value;
+            if (topName) document.getElementById("modalStudentName").value = topName;
+            if (topClass) document.getElementById("modalStudentClass").value = topClass;
+            if (topRoll) document.getElementById("modalStudentRoll").value = topRoll;
+            if (topVillage) document.getElementById("modalStudentVillage").value = topVillage;
+
+            const rep = buildDetailedReportObject();
+            document.getElementById("modalAttempted").textContent = `${rep.attemptedCount} / 500`;
+            document.getElementById("modalRight").textContent = rep.rightCount;
+            document.getElementById("modalWrong").textContent = rep.wrongCount;
+            document.getElementById("modalPercent").textContent = `${rep.accuracyPercent}%`;
+
+            const banner = document.getElementById("emailStatusBanner");
+            banner.classList.add("hidden");
+
+            document.getElementById("emailModal").classList.remove("hidden");
+        }
+
+        function closeEmailModal() {
+            document.getElementById("emailModal").classList.add("hidden");
+        }
+
+        // Method 1: Instant Direct POST to Formspree (https://formspree.io/f/xbggkvjn)
+        async function sendResultsViaCloudEmail() {
+            const rep = buildDetailedReportObject();
+            document.getElementById("studentName").value = rep.sName;
+            document.getElementById("studentRoll").value = rep.sRoll;
+
+            const banner = document.getElementById("emailStatusBanner");
+            const btn = document.getElementById("ajaxSendBtn");
+            banner.classList.remove("hidden");
+            banner.className = "p-3 rounded-xl text-xs sm:text-sm font-bold bg-indigo-50 text-indigo-900 border border-indigo-300";
+            banner.innerHTML = `<i class="fa-solid fa-spinner fa-spin mr-1.5"></i> Sending report for <strong>${rep.sName}</strong> via Formspree (<code>https://formspree.io/f/xbggkvjn</code>)...`;
+            btn.disabled = true;
+
+            try {
+                const response = await fetch(FORMSPREE_ENDPOINT, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "Accept": "application/json"
+                    },
+                    body: JSON.stringify({
+                        email: "balaswamysm@gmail.com",
+                        _subject: `Jacob Gapp Pronouns 500: ${rep.sName} (${rep.sClass}, Roll: ${rep.sRoll}) - Score: ${rep.rightCount}/${rep.attemptedCount} (${rep.accuracyPercent}%)`,
+                        Student_Name: rep.sName,
+                        Class_Section: rep.sClass,
+                        Roll_Number: rep.sRoll,
+                        Village: rep.sVillage,
+                        School: rep.sSchool,
+                        Completion_Status: rep.completionStatus,
+                        Total_Questions: 500,
+                        Attempted_Questions: `${rep.attemptedCount} / 500`,
+                        Right_Answered: rep.rightCount,
+                        Wrong_Answered: rep.wrongCount,
+                        Marks_Scored: `${rep.rightCount} / ${rep.attemptedCount || 500}`,
+                        Accuracy_Percentage: `${rep.accuracyPercent}%`,
+                        Overall_500_Percentage: `${rep.overallPercent}%`,
+                        Category_Breakdown: rep.categorySummaryText,
+                        Question_By_Question_Summary: rep.attemptedLogSummary,
+                        Full_Report: rep.fullTextReport
+                    })
+                });
+
+                if (response.ok) {
+                    banner.className = "p-3 rounded-xl text-xs sm:text-sm font-bold bg-emerald-100 text-emerald-950 border-2 border-emerald-500 telugu-text";
+                    banner.innerHTML = `<i class="fa-solid fa-circle-check text-emerald-600 mr-1"></i> <strong>విజయవంతంగా పంపబడింది! (Submitted to Formspree!)</strong> మీ మార్కులు మరియు పూర్తి నివేదిక <strong>https://formspree.io/f/xbggkvjn</strong> (balaswamysm@gmail.com) కు చేరాయి!`;
+                    try { confetti({ particleCount: 80, spread: 70, origin: { y: 0.6 } }); } catch (e) {}
+                } else {
+                    const errData = await response.json().catch(() => ({}));
+                    throw new Error(errData.error || "Formspree submission returned non-OK status");
+                }
+            } catch (err) {
+                banner.className = "p-3 rounded-xl text-xs sm:text-sm font-bold bg-amber-100 text-amber-950 border-2 border-amber-500 telugu-text";
+                banner.innerHTML = `<i class="fa-solid fa-envelope-circle-check mr-1"></i> నెట్‌వర్క్ సమస్య వల్ల ఇమెయిల్ యాప్ ఓపెన్ అవుతోంది... దయచేసి <strong>Send</strong> నొక్కి <strong>balaswamysm@gmail.com</strong> కు పంపండి!`;
+                sendResultsViaMailto();
+            } finally {
+                btn.disabled = false;
+            }
+        }
+
+        // Method 2: Guaranteed Mailto / Gmail App Trigger to balaswamysm@gmail.com
+        function sendResultsViaMailto() {
+            const rep = buildDetailedReportObject();
+            const subject = encodeURIComponent(
+                `Jacob Gapp School Pronouns 500 Results - ${rep.sName} (${rep.sClass}, Roll: ${rep.sRoll}) - Marks: ${rep.rightCount}/${rep.attemptedCount} (${rep.accuracyPercent}%)`
+            );
+            const body = encodeURIComponent(rep.fullTextReport);
+            window.location.href = `mailto:balaswamysm@gmail.com?subject=${subject}&body=${body}`;
+        }
+
+        // Method 3: Direct WhatsApp Report to Correspondent Balaswamy (8555927854)
+        function sendResultsViaWhatsApp() {
+            const rep = buildDetailedReportObject();
+            const waText = encodeURIComponent(
+                `*JACOB GAPP SCHOOL, PALADUGU*\n` +
+                `*Pronouns 500 Exercises Report*\n` +
+                `---------------------------\n` +
+                `*Student:* ${rep.sName}\n` +
+                `*Class:* ${rep.sClass} | *Roll:* ${rep.sRoll}\n` +
+                `*Village:* ${rep.sVillage}\n` +
+                `*Attempted:* ${rep.attemptedCount} / 500\n` +
+                `*Right (ఒప్పు):* ${rep.rightCount}\n` +
+                `*Wrong (తప్పు):* ${rep.wrongCount}\n` +
+                `*Percentage:* ${rep.accuracyPercent}%\n` +
+                `*Email:* balaswamysm@gmail.com`
+            );
+            window.open(`https://wa.me/918555927854?text=${waText}`, "_blank");
+        }
+
+        /********************************************************************
+         * 11. INITIALIZE ON WINDOW LOAD
+         ********************************************************************/
+        window.onload = function () {
+            renderStudyGuideCards();
+            initializeAndJumbleAll();
+        };
+    </script>
+</body>
+</html>
